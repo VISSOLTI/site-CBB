@@ -2,6 +2,8 @@
     padding: 0;
     margin: 0;
 }
+
+
 .logo a{
     text-decoration: none;
     color: #24252a;
@@ -10,9 +12,16 @@
     height: 20px;
     width: 250px;
 }
+.risca-1 {
+    border: 1px solid #4BC9F3;
+    border-radius: 50px;
+    width: 900px;
+    margin: 0 auto;
+}
 .title {
     color: #f09102;
     margin: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #codigo {
     font-size: 18px;
@@ -44,7 +53,8 @@
     margin: 20px;
     display: flex;
     justify-content: space-around;
-    box-shadow: 1px 1px 1px 1px black;
+    box-shadow: 1px 2px 2px 1px #24252a;
+    border-radius: 5px;
     
 }
 .form-group-container-1 {
@@ -167,17 +177,19 @@ p {
 
 
 
- #texto43 {
+#texto43 {
     padding: 5px;
     height: 25px;
     width: 640px;
     margin: 20px;
+    border-radius: 5px;
 }
 #texto10 {
     padding: 5px;
     margin: 0 auto;
     height: 20px;
     width: 150px;
+    border-radius: 5px;
 }
 
 /* 2° LINHA  */
@@ -190,6 +202,7 @@ p {
     margin: 0 auto;
     height: 20px;
     width: 450px;
+    border-radius: 5px;
 }
 #texto12,
 #texto11,
@@ -198,6 +211,7 @@ p {
     margin: 0 auto;
     height: 20px;
     width: 430px;
+    border-radius: 5px;
 }
 
 
@@ -212,6 +226,7 @@ p {
     margin: 0 auto;
     height: 20px;
     width: 50px;
+    border-radius: 5px;
 }
 
 /* Data Cadastro, Última Compra  */
@@ -221,6 +236,7 @@ p {
     margin: 0 auto;
     height: 20px;
     width: 195px;
+    border-radius: 5px;
 }
 
 
@@ -231,6 +247,7 @@ p {
     margin: 0 auto;
     height: 20px;
     width: 50px;
+    border-radius: 5px;
 }
 
 
@@ -242,6 +259,7 @@ p {
     margin: 0 auto;
     height: 20px;
     width: 110px;
+    border-radius: 5px;
 }
 /* Limite, Exposição */
 #texto5,
@@ -250,6 +268,7 @@ p {
     margin: 0 auto;
     height: 20px;
     width: 190px;
+    border-radius: 5px;
 }
 
 /* Inad atual, Inad Grupo, Protesto */ 
@@ -260,5 +279,6 @@ p {
     margin: 0 auto;
     height: 20px;
     width: 225px;
+    border-radius: 5px;
 }
 

@@ -1,0 +1,551 @@
+/* RESPONSIVE DESIGN */
+
+/*NOTEBOOK */
+
+/* I-FONE - CELULAR DEITADO */
+
+/* MEU - CELULAR DEITADO */
+@media(max-width: 1000px) {
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: .1rem;
+}
+.menu li {
+  display: block;
+  padding: .0rem;
+}
+.menu span {
+  font-size: 13.5px;
+}
+.logo-cbb {
+  height: 15px;
+  width: 150px;
+}
+.container00 {
+  display: none;
+}
+.logo-big {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 26px;
+}
+.logo-big img {
+  height: 150px;
+  border-radius: 150px;
+}
+.frase {
+  text-align: center;
+}
+.frase h3 {
+  font-size: 15.5px;
+  padding: 10px;
+  color: #4E9AB4;
+}
+.container-img01-mobile  {
+  display: flex;
+  margin-top: 26px;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100vw;
+  background-color: #ECECEE;
+}
+.img-topo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 100vw;
+}
+.img-mapa-deitado  {
+  display: flex;
+  height: 50vh;    
+}
+.container01 {
+  height: 350px;
+  width: 100vw;
+  margin-top: 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  margin-top: 0px;
+  display: flex;
+  justify-content: left;
+}
+.container01 .text01 {
+  color: #fff;
+  text-shadow: 1px 1px 2px #24252a;
+  text-align: left;
+  margin-left: 100px;
+  width: 450px;
+}
+.container01 .text01 h2 {
+  font-size: 30px;
+}
+.container01 .text01 p {
+  line-height: 25px;
+  font-size: 17px;
+}
+.container03 {
+  margin-top: 0px;
+  height: 45vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text03 ul  {
+  display: flex;
+  flex-direction: row;
+}
+.text03 li {
+  list-style: none;
+  margin: 7px;
+}
+.text03 button {
+  cursor: pointer;
+  font-size: 15.5px;
+  height: 35px;
+  width: 125px;
+  border-radius: 50px;
+  background-color: #fff;
+}
+.fundo03 {
+  height: 250px;
+  width: 100vw;
+  margin-top: 0px;
+  display: flex;
+  justify-content: center;
+
+}
+/*CAROSEL */
+.wrapper {
+  max-width: 515px;
+  width: 100%;
+  position: relative;
+}
+.wrapper i {
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+.wrapper i:active{
+  transform: translateY(-50%) scale(0.85);
+}
+.wrapper i:first-child{
+  left: -55px;
+}
+.wrapper i:last-child{
+  right: -55px;
+}
+.wrapper .carousel{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 5) - 20px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 26px;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+.carousel :where(.card, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel .card {
+  scroll-snap-align: start;
+  height: 255px;
+  list-style: none;
+  padding-bottom: 15px;
+  flex-direction: column;
+  border-radius: 8px;
+}
+.carousel .card .img {
+  cursor: pointer;
+  background: #fff;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+.card .img img {
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  border-radius: 25px;
+  object-fit: cover;
+}
+.carousel .card h2 {
+  font-weight: 500;
+  font-size: 1.10rem;
+  margin: 10px 0 5px;
+  color: #fff;
+}
+.carousel .card span {
+  color: #6A6D78;
+  font-size: 1.31rem;
+}
+.roda_pe {
+  margin-top: 0px;
+  height: 700px;
+  width: 100vw;
+  display: block;
+  justify-content: center;
+  text-align: center;
+}
+.roda_pe .contatos  {
+  padding:  30px;
+}
+.roda_pe h3 {
+  font-size: 18px;
+  color: goldenrod;
+}
+.siga_nos {
+  font-size: 18px;
+  color: goldenrod;
+}
+.roda_pe .contatos {
+  margin-left: 0px;
+}
+.roda_pe .contatos li {
+  list-style: none;
+  margin-top:10px;
+  margin-left: 10px;
+}
+.redes_sociais a li {
+  position: relative;
+  left: 320px;
+  list-style: none;
+  margin-top: 10px;
+}
+.sobre_nos  {
+  display: none;
+}
+.roda_pe .sobre_nos-mobile {
+  margin-top: 30px;
+}
+.sobre_nos-mobile {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.sobre_nos-mobile p {
+  font-weight: 400;
+  margin-top: 10px;
+  margin: 10px;
+  padding: 1px;
+}
+.whats img {
+  padding: 10px;
+  height: 40px;
+  width: 40px;
+}
+}
+
+
+
+/* CELULAR RETO--------------------------------------------------------------------------------------------- */
+@media (max-width: 730px) {
+
+#btn-mobile {
+  display: flex;
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  gap:  .5rem;
+}
+#hamburguer {
+  display: block;
+  border-top: 3px solid;
+  width: 20px;
+}
+#hamburguer::after, #hamburguer::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: currentColor;
+  margin-top: 5px;
+  transition: .3s;
+  position: relative;
+}
+.nav.active #hamburguer {
+  border-top-color: transparent;
+}
+.nav.active #hamburguer::before {
+  transform: rotate(135deg);
+}
+.nav.active #hamburguer::after {
+  transform: rotate(-135deg);
+  top: -7px;
+}
+.menu {
+  display: block;
+  position: absolute;
+  background-color: #ECECEE;
+  box-shadow: 0px 3px 10px #464646;
+  width: 100%;
+  top: 100px;
+  right: 0px;
+  height: 0px;
+  transition: .2s;
+  visibility: hidden;
+  overflow-y: hidden;
+}
+.nav.active .menu {
+  height: 390px; 
+  visibility: visible;
+  overflow-y: auto;
+}
+.menu li {
+  padding: 1rem 0;
+  margin: 0 1rem;
+  text-align: center;
+}
+.menu span {
+  font-size: 19px;
+}
+.logo-cbb {
+  height: 15px;
+  width: 215px;
+}
+.nav-link {
+  text-decoration: none;
+  font-size: 1.15rem;
+  color: #303030;
+  font-weight: 400;
+  position: relative;
+  transition: all 0.4s;
+}
+.nav-link:hover {
+  color: #fff;
+}
+.nav-link::after {
+  bottom: 0px;
+}
+.nav-item:hover {
+  background-color: #4BC9F3;
+}
+.nav-item-fale:hover {
+  scale: 1.1;
+  transition: 1s;
+}
+.nav-bar {
+  padding: 1.5rem 4rem;
+}
+.mobile-menu-icon button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: black;
+}
+.mobile-menu ul {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+.mobile-menu .nav-item {
+  display: block;
+  padding-top: 1.2rem;
+}
+.open {
+  display: block;
+}
+.container00 {
+  display: none;
+}
+.container-img01-mobile  {
+  margin-top: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100vw;
+  background-color: #ECECEE;
+}
+.img-topo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+.logo-big {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1px;
+}
+.logo-big img {
+  height: 160px;
+  border-radius: 150px;
+}
+.frase h3 {
+  font-size: 13.3px;
+  padding: 20px;
+  color: #4E9AB4;
+}
+.img-mobile {
+  height: 250px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('mapa-regiao.jpg'); 
+}
+.container01 {
+  height: 400px;
+  width: 100vw;
+  margin-top: 0px;
+  background-image: url('mapa-mobile.jpg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-size: cover;
+  flex-direction: column;    
+}
+
+.container01 .text01 {
+  color: #ffff;
+  text-shadow: 1px 1px 2px #24252a;
+  text-align: center;
+  width: 100vw;
+  margin-left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+.img-mapa-deitado  {
+  display: none;    
+}
+.container01 .text01 h2 {
+  font-size: 30px;
+  text-shadow: 1px 1px 2px #24252a;
+}
+.container01 .text01 p {
+  line-height: 25px;
+  font-size: 17px;
+  width: 350px;
+}
+.container03 {
+  margin-top: 0px;
+  height: 350px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text03 ul  {
+  display: flex;
+  flex-direction: column;
+}
+.text03 li {
+    list-style: none;
+    margin: 7px;
+}
+.text03 button {
+    cursor: pointer;
+    font-size: 15.5px;
+    height: 40px;
+    width: 160px;
+    border-radius: 50px;
+    background-color: #fff;
+}
+  .roda_pe {
+    margin-top: 0px;
+    height: 780px;
+    width: 100vw;
+    display: block;
+    justify-content: center;
+    text-align: center;
+  }
+  .roda_pe .contatos  {
+    padding:  30px;
+  }
+  .roda_pe h3 {
+    font-size: 20px;
+    color: goldenrod;
+  }
+  .siga_nos {
+    color: goldenrod;
+  }
+  .roda_pe .contatos {
+    margin-left: 0px;
+  }
+  .roda_pe .contatos li {
+    list-style: none;
+    margin-top:10px;
+    margin-left: 10px;
+  }
+  .redes_sociais a li {
+    position: relative;
+    left: 140px;
+    list-style: none;
+    margin-top: 10px;
+  }
+  .sobre_nos  {
+    display: none;
+  }
+  .roda_pe .sobre_nos-mobile {
+    margin-top: 30px;
+  }
+  .sobre_nos-mobile {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .sobre_nos-mobile p {
+    margin-top: 10px;
+  }
+  
+  .whats {
+    background-color:rgb(0, 231, 119) ;
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    z-index: 9999;
+    border-radius: 100px;
+  }
+  .whats img {
+    padding: 10px;
+    height: 40px;
+    width: 40px;
+  }
+}

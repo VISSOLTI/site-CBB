@@ -1,0 +1,63 @@
+@media (max-width: 730px) {
+/*CAROSEL */
+.fundo03,
+.fundo03-B {
+  height: 200px;
+  width: 100vw;
+  margin-top: 0px;
+  display: flex;
+  justify-content: center;
+}
+.wrapper i,
+.wrapper-B i {
+  top: 50%;
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+  font-size: 2rem;
+  position: absolute;
+  text-align: center;
+  line-height: 35px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+.carousel .card,
+.carousel-B .card {
+  scroll-snap-align: start;
+  height: 200px;
+  list-style: none;
+  padding-bottom: 15px;
+  flex-direction: column;
+  border-radius: 8px;
+}
+.carousel .card .img,
+.carousel .card .img2,
+.carousel-B .card .img,
+.carousel-B .card .img2 {
+  height: 100px;
+  width: 100px;
+  border-radius: 0px;
+}
+.card .img img,
+.card .img2 img {
+  width: 100px;
+  height: 100px;
+  border-radius: 0px;
+}
+.wrapper i:first-child,
+.wrapper-B i:first-child{
+  left: 20px;
+}
+.wrapper i:last-child,
+.wrapper-B i:last-child {
+  right: 30px;
+}
+.wrapper .carousel,
+.wrapper-B .carousel-B {
+  grid-auto-columns: calc((100% / 2) - 9px);
+  grid-auto-columns: 100%;
+}
+}

@@ -1,0 +1,303 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #ECECEE;
+    box-shadow: 0px 3px 10px #464646;
+}
+
+#header {
+    box-sizing: border-box;
+    height: 100px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+}
+.logo a{
+    text-decoration: none;
+    color: #24252a;
+}
+.logo-cbb {
+    height: 20px;
+    width: 250px;
+}
+.menu {
+    display: flex;
+    list-style: none;
+    gap: .5rem;
+}
+.menu li {
+    display: block;
+    padding: .5rem;
+}
+#btn-mobile {
+    display: none;
+}
+.nav-item {
+    margin: 0 5px;
+}
+.nav-link {
+    text-decoration: none;
+    font-size: 20px;
+    color: #303030;
+    font-weight: 400;
+    position: relative;
+    transition: all 0.4s;
+}
+.menu .nfd {
+    color: #f09102;
+}
+.nav-link-fale_conosco {
+    text-decoration: none;
+    font-size: 20px;
+    color: #303030;
+    font-weight: 400;
+   
+    transition: all 0.4s;
+}
+.menu .fale_conosco {
+    color: #4BC9F3;
+    border: 1px solid #4BC9F3;
+    border-radius: 100px;
+    padding: 10px;
+}
+.nav-link:hover {
+    color: black;
+}
+.nav-link::after {
+    content: ' ';
+    height: 2px;
+    width: 100%;
+    background-color: #4BC9F3;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    opacity: 0;
+    transition: all 0.2s;
+}
+.nav-link:hover::after {
+    opacity: 1;
+}
+
+.container-mobile {
+    display: none;
+}
+.container-img01-mobile {
+    display: none;
+}
+.container00 {
+    margin-top: 1px;
+    height: 35vh;
+    width: 100vw;
+}
+.container-imagem img {
+    height: 35vh;
+    width: 100vw;
+}
+.container01-mobile {
+    display: none;
+}
+.logo-big {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+.logo-big img {
+    height: 250px;
+    border-radius: 150px;
+}
+.frase {
+    text-align: center;
+}
+.frase h3 {
+    font-size: 23px;
+    padding: 10px;
+    color: #4E9AB4;
+}
+.container01 {
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    background-image: url('03fornecedor.jpeg');
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    position: relative;
+    isolation: isolate;
+}
+.container01::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background-color: #303030;
+    opacity: 0.7;
+}
+.container01 .text01 {
+    color: #fff;
+    text-shadow: 1px 1px 1px #24252a;
+    width: 680px;
+    margin-left: 70px;
+}
+.text01 h2 {
+    font-size: 50px;
+    color: #4BC9F3;
+}
+.text01 p {
+    line-height: 30px;
+    font-size: 24.5px;
+}
+.fornecedor-mobile {
+    display: none;
+}
+.container02 {
+    background-color: #ECECEE;
+    height: 1750px;
+    width: 100vw;
+    margin-top: 0px
+}
+.container-catalogos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+.container-catalogos img {
+    height: 150px;
+    width: 150px;
+    margin: 20px;
+    border-radius: 5px;
+}
+.container-catalogos img:hover {
+    scale: 1.1;
+    transition: 2s;
+}
+.container02-mobile {
+    display: none;
+}
+
+.roda_pe {
+    margin-top: 0px;
+    height: 450px;
+    width: 100vw;
+    background-color: #ECECEE;
+    display: flex;
+    justify-content: space-between;
+    color: #24252a;
+    font-size: 16px;
+}
+.roda_pe .contatos,
+.roda_pe .redes_sociais,
+.roda_pe .sobre_nos {
+    margin-top: 10px;
+}
+.roda_pe h3 {
+    font-size: 22px;
+    color: goldenrod;
+}
+.ion_insta {
+    font-size: 25px;
+    color: #e958c9;
+}
+.ion_link,
+.ion_face {
+    font-size: 25px;
+    color: rgb(64, 69, 208);
+}
+.roda_pe .contatos {
+    margin-left: 30px;
+}
+.roda_pe .contatos li {
+    list-style: none;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.contatos  a {
+    color: #24252a;
+    text-decoration: none;
+}
+.contatos p {
+    margin-top: 10px;
+}
+.contatos span {
+    color: #03085e;
+}
+.contatos .icon-endereco:hover {
+    scale: 1.1;
+    transition: 2s;
+}
+.redes_sociais li {
+    list-style: none;
+    margin-top: 20px;
+    width: max-content;
+    position: relative;
+}
+.contatos .icon span,
+.redes_sociais .icon span {
+    padding: 2px;
+}
+.redes_sociais a {
+    color: #24252a;
+    text-decoration: none;    
+}
+.redes_sociais h3,
+ .sobre_nos h3 {
+    margin-top: 20px;
+}
+.sobre_nos-mobile {
+    display: none;
+}
+.sobre_nos {
+    margin-right: 20px;
+}
+.sobre_nos p {
+    margin-top: 10px;
+}
+footer h1 {
+    text-align: center;
+    background-color: #ECECEE;
+}
+
+.whats {
+    background-color:rgb(0, 231, 119) ;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 9999;
+    border-radius: 100px;
+}
+
+.whats img {
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+}
+.whats span {
+    position: relative;
+    bottom: 15px;
+    right: 0px;
+}
+.whats-contato {
+    color: #fff;
+    text-shadow: 1px 1px 1px #24252a;
+}
+
+.whats:hover{ 
+    scale: 1.2;
+    transition: 1s
+}
+.logo-site-mobile {
+    display: none;
+}

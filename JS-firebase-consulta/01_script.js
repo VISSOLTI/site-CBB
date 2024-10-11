@@ -72,11 +72,11 @@ function SelectData() {
         const tableBody = document.createElement('tbody');
     
         // Create table headers (you can customize the names = 45)
-        const headers = ['STATUS','Lançamento','NF/NFD', 'Emissão', 'Vencimento', 'Valor Original', 'Valor Desconto', 'Valor Abatimento', 'Valor Líquido', 'Valor Atualizado', 'Aut.NFD', 'Produto', 'Protesto-2', 'Código Boleto', 'Código Barras', 'Vend', 'Supervisor', 'Obs Pagamento'];
+        const headers = ['Status','Lançamento','NF/NFD', 'Emissão', 'Vencimento', 'Valor Original', 'Valor Desconto', 'Valor Abatimento', 'Valor Líquido', 'Valor Atualizado', 'Aut.NFD', 'Produto', 'Protesto-2', 'Código Boleto', 'Código Barras', 'Vend', 'Supervisor', 'Obs Pagamento'];
         headers.forEach(header => {
           const th = document.createElement('th');
           th.textContent = header;
-          tableHeader.appendChild(th);
+          tableHeader.appendChild(th); ///const level in data - const key of
         });
     
         // Add data to the table

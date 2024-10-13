@@ -79,7 +79,7 @@ function SelectData() {
           tableHeader.appendChild(th); ///const level in data - const key of
         });
     
-        // Add data to the table
+        // Adcionar a tabela
         for (const level in data) {
           if (data.hasOwnProperty(level)) {
             const levelData = data[level];

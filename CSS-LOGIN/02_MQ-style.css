@@ -1,3 +1,40 @@
+@media(max-width: 1000px) { 
+
+.form-group-container-1,
+.form-group-container-2,
+.form-group-container-3 {
+    width: 100%;
+    margin: 5px;
+    display: flex;
+    box-shadow: 1px 1px 1px 1px black;
+}
+
+span {
+    margin: 2px;
+}
+
+.form-group-container-3 span #texto1,
+.form-group-container-3 span #texto2,
+.form-group-container-3 span #texto3,
+.form-group-container-3 span #texto16,
+.form-group-container-3 span #texto17,
+.form-group-container-3 span #texto44,
+.form-group-container-3 span #texto6,
+.form-group-container-3 span #texto7,
+.form-group-container-3 span #texto18,
+.form-group-container-3 span #texto5,
+.form-group-container-3 span #texto20,
+.form-group-container-3 span #texto4,
+.form-group-container-3 span #texto19,
+.form-group-container-3 span #texto14,
+.form-group-container-3 span #texto33 {
+    margin: 5px;
+}
+
+
+}
+
+
 @media (max-width: 730px) {
 
 body {
@@ -42,7 +79,6 @@ body {
     display: block;
     justify-content: left;
     box-shadow: 1px 1px 1px 1px black;
-    
 }
 .form-group-container-1 {
     background-color: #ECECEE; 

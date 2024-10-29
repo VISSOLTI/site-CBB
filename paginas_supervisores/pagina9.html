@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consulta Contas a Receber</title>
+    <link rel="stylesheet" href="../CSS-LOGIN/02_styles.css">
+    <link rel="stylesheet" href="../CSS-LOGIN/02_MQ-style.css">
+</head>
+<body>
+    <div class="form-group-container-0">
+        <h1 class="logo"><a href="index.html"><img class="logo-cbb" src="../imagens/logo-cbb.png" alt=""></a></h1>
+        <h1 class="title">Consulta Contas a Receber</h1>
+        <label for="nome">Código Cliente:</label>
+        <input type="text" id="codigo">
+        <button id="Selbtn">CONSULTAR</button>  
+        <button class="sair" type="button" onclick="logout()">SAIR</button>       
+    </div>
+    <div class="form-group-container-1">
+        <div class="grupo">
+            <span>Razão Social<p id="texto43" style="display: block; pointer-events: none;"></p></span>
+            <span>Status Ficha<p id="texto10" style="display: block; pointer-events: none;"></p></span>
+        </div>
+    </div>
+    <div class="form-group-container-2">
+        <div class="grupo">
+            <span>CNPJ/CPF<p id="texto45" style="display: block; pointer-events: none;"></p></span>
+            <span>Grupo Análise<p id="texto13" style="display: block; pointer-events: none;"></p></span>
+            <span>Contato/Telefone<p id="texto8" style="display: block; pointer-events: none;"></p></span>          
+        </div>
+        <div class="grupo">
+            <span>Cidade<p id="texto12" style="display: block; pointer-events: none;"></p></span>
+            <span>Canal<p id="texto11" style="display: block; pointer-events: none;"></p></span>
+            <span>E-mail<p id="texto9" style="display: block; pointer-events: none;"></p></span>
+        </div>
+    </div>
+    <div class="form-group-container-3">
+    <div class="grupo">   
+        <span>N° Supervisor<p id="texto1" style="display: block; pointer-events: none;"></p></span>
+        <span>Vend 1<p id="texto2" style="display: block; pointer-events: none;"></p></span>
+        <span>Vend 2<p id="texto3" style="display: block; pointer-events: none;"></p></span> 
+    </div>
+    <div class="grupo">
+        <span>Data Cadastro<p id="texto16" style="display: block; pointer-events: none;"></p></span>
+        <span>Última Compra<p id="texto17" style="display: block; pointer-events: none;"></p></span>
+        <span>Bloqueio<p id="texto44" style="display: block; pointer-events: none;"></p></span>  
+    </div>
+    <div class="grupo">
+        <span>Tipo PGT<p id="texto6" style="display: block; pointer-events: none;"></p></span>
+        <span>Prazo<p id="texto7" style="display: block; pointer-events: none;"></p></span>
+        <span>Acordo<p id="texto18" style="display: block; pointer-events: none;"></p></span>
+    </div>
+    <div class="grupo">
+        <span>Limite<p id="texto5" style="display: block; pointer-events: none;"></p></span>
+        <span>Exposição<p id="texto20" style="display: block; pointer-events: none;"></p></span>
+        <span>Risco<p id="texto4" style="display: block; pointer-events: none;"></p></span>
+    </div>
+    <div class="grupo">
+        <span>Inad Atual<p id="texto19" style="display: block; pointer-events: none;"></p></span>
+        <span>Inad Grupo<p id="texto14" style="display: block; pointer-events: none;"></p></span>
+        <span>Protesto<p id="texto33" style="display: block; pointer-events: none;"></p></span>
+    </div>
+    </div>
+
+    <hr>
+    <div id="container-teste"></div>
+<div class="hide">
+        <div class="form-group-container">
+            <span>Vencimento<p id="texto25" style="display: block; pointer-events: none;"></p></span>
+            <span>Emissão<p id="texto24" style="display: block; pointer-events: none;"></p></span>
+            <span>21<p id="texto21" style="display: block; pointer-events: none;"></p></span>
+            <span>22<p id="texto22" style="display: block; pointer-events: none;"></p></span>
+            <span>23<p id="texto23" style="display: block; pointer-events: none;"></p></span>
+        </div>
+        <div class="form-group-container">
+            <span>26<p id="texto26" style="display: block; pointer-events: none;"></p></span>
+            <span>27<p id="texto27" style="display: block; pointer-events: none;"></p></span>
+            <span>28<p id="texto28" style="display: block; pointer-events: none;"></p></span>
+            <span>29<p id="texto29" style="display: block; pointer-events: none;"></p></span>
+            <span>30<p id="texto30" style="display: block; pointer-events: none;"></p></span>
+        </div>
+        <div class="form-group-container">
+            <span>31<p id="texto31" style="display: block; pointer-events: none;"></p></span>
+            <span>32<p id="texto32" style="display: block; pointer-events: none;"></p></span>
+            <span>34<p id="texto34" style="display: block; pointer-events: none;"></p></span>
+            <span>35<p id="texto35" style="display: block; pointer-events: none;"></p></span>
+            <span>36<p id="texto36" style="display: block; pointer-events: none;"></p></span>
+        </div>
+        <div class="form-group-container">
+            <span>37<p id="texto37" style="display: block; pointer-events: none;"></p></span>
+            <span>38<p id="texto38" style="display: block; pointer-events: none;"></p></span>
+            <span>39<p id="texto39" style="display: block; pointer-events: none;"></p></span>
+            <span>40<p id="texto40" style="display: block; pointer-events: none;"></p></span>
+            <span>41<p id="texto41" style="display: block; pointer-events: none;"></p></span>
+        </div>
+        <div class="form-group-container">
+            <span>42<p id="texto42" style="display: block; pointer-events: none;"></p></span>
+            <span>15<p id="texto15" style="display: block; pointer-events: none;"></p></span>
+        </div>
+</div>
+    <script type="module" src="../JS-firebase-consulta/750_bd.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="../JS-login/auth-guard.js"></script>
+    <script src="../JS-login/loading.js"></script>
+    <script src="../JS-login/login_firebase.js"></script>
+    <script src="../JS-login/login_page_script.js"></script>
+    <script src="../JS-login/logout.js"></script>
+    <script src="../JS-login/validation.js"></script>
+</body>
+</html>

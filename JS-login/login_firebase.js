@@ -1,10 +1,10 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyB5ZDc8xbaVCE8WYR8rSYPA4pmoMvPYm68",
-  authDomain: "registro-58ecb.firebaseapp.com",
-  projectId: "registro-58ecb",
-  storageBucket: "registro-58ecb.appspot.com",
-  messagingSenderId: "799954462929",
-  appId: "1:799954462929:web:d38eb1609a8756f92abdf0"
+  apiKey: "AIzaSyCiwqAVMY6cgxEYDhne9lquiS5eYvWfJk8",
+  authDomain: "geral-bd.firebaseapp.com",
+  projectId: "geral-bd",
+  storageBucket: "geral-bd.appspot.com",
+  messagingSenderId: "970755991114",
+  appId: "1:970755991114:web:8fb774c7d6d2d25d3de8b3"
 };
   // Initialize Firebase
 firebase.initializeApp(firebaseConfig);

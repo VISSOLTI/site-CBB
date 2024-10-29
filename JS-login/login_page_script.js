@@ -10,15 +10,39 @@ function onChangePassword() {
 
 function login() {
     load();
-    firebase.auth().signInWithEmailAndPassword(
-        form.email().value, form.password().value
-    ).then(() => {
+    
+    const email = form.email().value;
+    const password = form.password().value;
+
+    const users = {
+        "100@vissol.com.br": { password: "!100_sup_q", page: "paginas_supervisores/pagina1.html" },
+        "200@vissol.com.br": { password: "*200_sup_w", page: "paginas_supervisores/pagina2.html" },
+        "250@vissol.com.br": { password: "*250_sup_p", page: "paginas_supervisores/pagina25.html" },
+        "300@vissol.com.br": { password: "!300_sup_e", page: "paginas_supervisores/pagina3.html" },
+        "400@vissol.com.br": { password: "*400_sup_r", page: "paginas_supervisores/pagina4.html" },
+        "500@vissol.com.br": { password: "!500_sup_t", page: "paginas_supervisores/pagina5.html" },
+        "550@vissol.com.br": { password: "*550_sup_k", page: "paginas_supervisores/pagina6.html" },
+        "600@vissol.com.br": { password: "!600_sup_j", page: "paginas_supervisores/pagina7.html" },
+        "700@vissol.com.br": { password: "*700_sup_h", page: "paginas_supervisores/pagina8.html" },
+        "750@vissol.com.br": { password: "!750_sup_g", page: "paginas_supervisores/pagina9.html" },
+        "geral00@vissol.com.br": { password: "*010_ger_x", page: "paginas_supervisores/pagina00.html" }
+    };
+
+    if (users[email] && users[email].password === password) {
+        firebase.auth().signInWithEmailAndPassword(email, password)
+            .then(() => {
+                hideLoad();
+                window.location.href = users[email].page; // Redireciona para a página correspondente
+            })
+            .catch(error => {
+                hideLoad();
+                alert(getErrorMessage(error));
+            });
+    } else {
         hideLoad();
-        window.location.href ="01home.html";
-      }).catch(error => {
-        hideLoad();
-        alert(getErrorMessage(error))
-      });
+        alert("E-mail ou senha incorretos.");
+        window.location.href = "index.html"; // Redireciona para a página padrão
+    }
 }
 
 function getErrorMessage(error) { 

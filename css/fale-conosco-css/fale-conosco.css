@@ -719,3 +719,17 @@ h2 {
   background-color: #007bff;
   color: #ECECEE;
 }
+
+
+
+.form-field {
+    position: relative; /* Necessary for absolute positioning of the icon */
+}
+
+#toggleIcon {
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }

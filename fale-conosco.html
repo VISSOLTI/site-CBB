@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="css/fale-conosco-css/mq_fale-conosco.css">
     <link rel="stylesheet" href="css/global-carousel/style.css">
     <link rel="stylesheet" href="css/global-carousel/mq-style.css">
-    
+    <!----->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
+    <!----->
     <link rel="stylesheet" href="CSS-LOGIN/login_page_css.css"> <!---->
     
     <title>CBB Distribuidora</title>
@@ -308,9 +310,11 @@
         <div class="error" id="email-invalid-error">Email é inválido</div>
     </div>
     <div class="form-field">
-        <label for="password">Senha:
-        <input type="password" name="password" onchange="onChangePassword()" placeholder="senha" id="password"/></label>
-        <div class="error" id="password-required-error">senha é obrigatória</div>
+        <label for="password">Senha:</label>
+        <input type="password" name="password" onchange="onChangePassword()" placeholder="senha" id="password"/>
+
+        <i id="toggleIcon" class="fa fa-eye-slash" onclick="togglePassword()"></i>
+      
     </div>
     <button type="button" class="solid" id="login-button"  onclick="login()">
       Entrar

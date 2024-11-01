@@ -236,23 +236,27 @@
         <h2>Alteração de Prazo para pagamento</h2>
         <form id="modalForm">
           <label for="cod_cliente">Código do Cliente</label>
-          <input type="text" id="cod_cliente" name="cod_cliente"> 
+          <input type="text" id="cod_cliente" name="cod_cliente">
+          <label for="razao_social">Razão Social</label>
+          <input type="text" id="razao_social_2" name="razao_social">
           <label for="name_sup">Nome do Supervisor</label>
           <input type="text" id="name_sup">
           <label for="name_vend">Nome do Vendedor</label>
           <input type="text" id="name_vend">
           <label for="cod_vend">Código do Vendedor</label>
           <input type="text" id="cod_vend">
-          <label for="tel_solicitante">Telefone do Solicitante</label>
-          <input type="text" id="tel_solicitante" placeholder="(00)0000-0000">
           <label for="prazo">Prazo Desejado</label>
           <input type="text" id="prazo">
           <label id="solicitado"><b>*Solicitado por</b></label>
-          <br>
+          <hr>
           <label><input id="op_Vendedor" type="radio" name="funcao" value="Vendedor">Vendedor</label>
           <label><input id="op_Supervisor" type="radio" name="funcao" value="Supervisor">Supervisor</label>
           <label><input id="op_Cliente" type="radio" name="funcao" value="Cliente">Cliente</label>
-          <br>
+          <hr>
+          <label for="nome_solicitante">Nome do Solicitante</label>
+          <input type="text" id="nome_solicitante" name="nome_solicitante">
+          <label for="tel_solicitante">Telefone do Solicitante</label>
+          <input type="text" id="tel_solicitante" placeholder="(00)0000-0000">        
           <input type="button" value="Enviar Solicitação" id="soli" class="btn">
         </form>
       </div>

@@ -23,13 +23,15 @@ from "https://www.gstatic.com/firebasejs/10.12.3/firebase-database.js"
 const db = getDatabase();
 
 var form = document.getElementById("modalForm")
-var Superior = document.getElementById("name_sup");
+var Cod_cliente = document.getElementById("cod_cliente");
+var Razao_Social = document.getElementById("razao_social_2")
+var Nome_Solicitante = document.getElementById("nome_solicitante")
+var Supervisor_2 = document.getElementById("name_sup");
 var Vendedor = document.getElementById("name_vend");
 var Cod_vend = document.getElementById("cod_vend");
-var Cod_cliente = document.getElementById("cod_cliente");
-var Tel_solicitante = document.getElementById("tel_solicitante")
 var Prazo = document.getElementById("prazo");
 var Insbtn = document.getElementById("soli");
+var Tel_solicitante = document.getElementById("tel_solicitante")
 
 function formatarCodigo(input) {
   // Remove todos os caracteres que não sejam números
@@ -60,11 +62,15 @@ if (Cod_cliente.value === '') {
 
 const funcaoSelecionada = document.querySelector('input[name="funcao"]:checked').value;
 
-set(ref(db, "Solicitacao/" + "Cód Cliente: " + Cod_cliente.value + 
-  "| Nome Superior: " + Superior.value +
-  "| Nome Vendedor: " + Vendedor.value + "| Cód Vendedor: " + 
-  Cod_vend.value + "| Prazo: " + Prazo.value + "| Tel Solicitante:" + Tel_solicitante.value +
-"| Solicitante: " + funcaoSelecionada),
+set(ref(db, "Solicitacao/" + "Cód Cliente: " + Cod_cliente.value +
+  " | Razão Social: " + Razao_Social.value +
+  " | Nome Supervisor: " + Supervisor_2.value +
+  " | Nome Vendedor: " + Vendedor.value +
+  " | Cód Vendedor: " +  Cod_vend.value + 
+  " | Prazo: " + Prazo.value +
+  " | Nome Solicitante: " + Nome_Solicitante.value + 
+  " | Tel Solicitante:" + Tel_solicitante.value +
+" | Solicitante: " + funcaoSelecionada),
   {
       Hora_da_Solicitacao: horaFormatada,
   })

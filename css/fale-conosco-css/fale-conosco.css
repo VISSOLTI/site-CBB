@@ -295,11 +295,25 @@ header {
     border-radius: 5px;
 }
 
+#cod_cliente,
+#razao_social_2,
+#nome_solicitante,
+#name_sup,
+#name_vend,
+#cod_vend,
+#prazo,
+#tel_solicitante {
+    margin: 6px;
+}
+
+hr {
+    margin: 12px;
+}
+
 #modalForm #op_Vendedor,
 #modalForm #op_Supervisor,
 #modalForm #op_Cliente {
-    display: inline-block;
-    margin-right: 10px; 
+    display: inline-block; 
     margin: 3px;
 }
 

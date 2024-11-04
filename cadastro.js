@@ -34,6 +34,7 @@ var Supervisor = document.getElementById("supervisor");
 var DiaVisita = document.getElementById("dia_visita");
 
 var btnEnviar = document.getElementById("cadastro");
+var btnClose = document.getElementById("closeModal")
 
 
 function formatarDocumento(input) {
@@ -69,6 +70,11 @@ document.getElementById('tel_whats').addEventListener('input', function() {
   this.value = formatarTelefone(telefone);
 });
 
+function closeModal() {
+  const modal = document.getElementById('modalSucesso');
+  modal.style.display = 'none';
+}
+
 function Solicitar_cadastro(){
   const dataHora_cad = new Date();
   const horaFormatada_cad = dataHora_cad.toLocaleString();
@@ -98,10 +104,15 @@ set(ref(db, "Cadastro/" + RazaoSocial.value),
     Hora_do_Cadastro: horaFormatada_cad,
 })
 .then(() => {
-  alert("Solicitação enviada com sucesso");
-  alert("O setor de cadastro entrará em contato para solicitar documentos adicionais caso necessário.");
-  alert("Documentos PJ:\n- CNH ou RG do Sócio ADM\n- Comprovante de Residência\n- Foto da Fachada\n- Ficha de Cadastro\nDocumentos PF:\n-CNH ou RG\n- Comprovante de Residência\n- Foto da Fachada\n- Ficha de Cadastro");
- 
+  
+  // Mostrar o modal
+  const modal = document.getElementById('modalSucesso');
+  modal.style.display = 'block'
+
+  
+  
+  
+
   form_cadastro.reset();
 })
 .catch((error) => {
@@ -109,5 +120,7 @@ set(ref(db, "Cadastro/" + RazaoSocial.value),
 });
 }
 
+
+btnClose.addEventListener('click', closeModal);
 btnEnviar.addEventListener('click', Solicitar_cadastro);
 

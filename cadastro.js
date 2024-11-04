@@ -109,10 +109,6 @@ set(ref(db, "Cadastro/" + RazaoSocial.value),
   const modal = document.getElementById('modalSucesso');
   modal.style.display = 'block'
 
-  
-  
-  
-
   form_cadastro.reset();
 })
 .catch((error) => {

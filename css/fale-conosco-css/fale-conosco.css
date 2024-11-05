@@ -714,9 +714,9 @@ footer h1 {
     color: #e4e2e2;
     transition: 1s;
 }
-h2 {
+.title h2 {
     text-align: center;
-    color: #4BC9F3;
+    color: #F09102;
 }
 .container-consulta #consulta-cnpj_cpf,
 .container-consulta #consulta-cod_cli {
@@ -787,46 +787,7 @@ h2 {
     right: 10px;
     transform: translateY(-50%);
     cursor: pointer;
-  }
+}
 
 
  
-
-
-/* */
-.modal-content {
-    background-color: #394147;
-    border-radius: 10px;
-    color: #e4e2e2;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-h3 {
-    color: #4BC9F3;
-}
-.modal-content p {
-    font-size: 18px;
-    margin: 5px;
-}
-.modal-content  a {
-    color: #f09102;
-    font-weight: bolder;
-    text-decoration: none;
-}
-.modal-content ion-icon {
-    color: #f09102;
-}
-.modal-content  {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.modal-content button {
-    height: 35px;
-    width: 100px;
-    border-radius: 5px;
-    background-color: rgb(213, 42, 42);
-    color: #e4e2e2;
-    font-size: 16px;
-    margin: 10px;
-}

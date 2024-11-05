@@ -41,7 +41,7 @@ function login() {
     } else {
         hideLoad();
         alert("E-mail ou senha incorretos.");
-        window.location.href = "index.html"; // Redireciona para a página padrão
+        window.location.href = "fale-conosco.html"; // Redireciona para a página padrão
     }
 }
 

@@ -86,11 +86,19 @@ function Solicitar_cadastro(){
   const dataHora_cad = new Date();
   const horaFormatada_cad = dataHora_cad.toLocaleString();
 
+
+  // Condição para o preenchimento Razão Social
+  if (RazaoSocial.value === '') {
+    alert("Preencha o Razao Social!");
+    return;
+  }
   // Condição para o preenchimento do CNPJ/CPF
   if (CnpjCpf.value === '') {
   alert("Preencha o CNPJ/CPF");
   return;
   }
+
+ 
 
   // Validação do e-mail
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

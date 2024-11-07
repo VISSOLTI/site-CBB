@@ -15,17 +15,13 @@ function login() {
     const password = form.password().value;
 
     const users = {
-        "100@vissol.com.br": { password: "!100_sup_q", page: "paginas_supervisores/pagina1.html" },
-        "200@vissol.com.br": { password: "*200_sup_w", page: "paginas_supervisores/pagina2.html" },
-        "250@vissol.com.br": { password: "*250_sup_p", page: "paginas_supervisores/pagina25.html" },
-        "300@vissol.com.br": { password: "!300_sup_e", page: "paginas_supervisores/pagina3.html" },
-        "400@vissol.com.br": { password: "*400_sup_r", page: "paginas_supervisores/pagina4.html" },
-        "500@vissol.com.br": { password: "!500_sup_t", page: "paginas_supervisores/pagina5.html" },
-        "550@vissol.com.br": { password: "*550_sup_k", page: "paginas_supervisores/pagina6.html" },
-        "600@vissol.com.br": { password: "!600_sup_j", page: "paginas_supervisores/pagina7.html" },
-        "700@vissol.com.br": { password: "*700_sup_h", page: "paginas_supervisores/pagina8.html" },
-        "750@vissol.com.br": { password: "!750_sup_g", page: "paginas_supervisores/pagina9.html" },
-        "geral00@vissol.com.br": { password: "*010_ger_x", page: "paginas_supervisores/pagina00.html" }
+        "101@vissol.com.br": { password: "q101_vend_t", page: "paginas_Sup_100_Vendedores/pagina101.html" },
+        "102@vissol.com.br": { password: "g102_vend_u", page: "paginas_Sup_100_Vendedores/pagina102.html" },
+        "103@vissol.com.br": { password: "y103_vend_i", page: "paginas_Sup_100_Vendedores/pagina103.html" },
+        "105@vissol.com.br": { password: "p105_vend_o", page: "paginas_Sup_100_Vendedores/pagina105.html" },
+        "106@vissol.com.br": { password: "m106_vend_p", page: "paginas_Sup_100_Vendedores/pagina106.html" },
+        "107@vissol.com.br": { password: "a107_vend_h", page: "paginas_Sup_100_Vendedores/pagina107.html" },
+        
     };
 
     if (users[email] && users[email].password === password) {
@@ -106,21 +102,18 @@ const form = {
     passwordRequiredError: () => document.getElementById('password-required-error'),
     recoverPassword: () => document.getElementById('recover-password-button'),
 }
-
-
-
 function togglePassword() {
     const passwordField = document.getElementById('password');
-    const toggleIcon = document.getElementById('fechado');
-
+    const toggleIcon = document.getElementById('toggleIcon');
+  
     if (passwordField.type === 'password') {
-        passwordField.type = 'text';
-        toggleIcon.src = 'imagens/aberto.png'; // Replace with the path to your open eye image
+      passwordField.type = 'text';
+      toggleIcon.classList.remove('fa-eye-slash');
+      toggleIcon.classList.add('fa-eye');
     } else {
-        passwordField.type = 'password';
-        toggleIcon.src = 'imagens/fechado.png'; // Replace with the path to your closed eye image
+      passwordField.type = 'password';
+      toggleIcon.classList.remove('fa-eye');
+      toggleIcon.classList.add('fa-eye-slash');
     }
-
-
-}
+  }
 

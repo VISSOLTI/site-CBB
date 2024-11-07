@@ -27,12 +27,15 @@ var form_cadastro = document.getElementById("modalForm_cadastro")
 var RazaoSocial = document.getElementById("razao_social");
 var CnpjCpf = document.getElementById("cnpj_cpf"); 
 var NomeFantasia = document.getElementById("nome_fantasia");
+var Canal = document.getElementById("canal");
 var TelWhats = document.getElementById("tel_whats");
 var Email = document.getElementById("e_mail");
 var Vendedor = document.getElementById("vendedor");
 var Supervisor = document.getElementById("supervisor");
 var DiaVisita = document.getElementById("dia_visita");
-
+var Nome_Solicitante_cad = document.getElementById("nome_solicitante_cad")
+var Tel_solicitante_cad = document.getElementById("tel_solicitante_cad")
+var Observacao = document.getElementById("observacao")
 var btnEnviar = document.getElementById("cadastro");
 var btnClose = document.getElementById("closeModal")
 
@@ -69,6 +72,10 @@ document.getElementById('tel_whats').addEventListener('input', function() {
   var telefone = this.value;
   this.value = formatarTelefone(telefone);
 });
+document.getElementById('tel_solicitante_cad').addEventListener('input', function() {
+  var telefone = this.value;
+  this.value = formatarTelefone(telefone);
+});
 
 function closeModal() {
   const modal = document.getElementById('modalSucesso');
@@ -96,13 +103,17 @@ set(ref(db, "Cadastro/" + RazaoSocial.value),
 {
     Cnpj_CPF: CnpjCpf.value,
     Nome_Fantasia: NomeFantasia.value,
+    Canal: Canal.value,
     Tel_Whats_App: TelWhats.value,
     Email: Email.value,
     Vendedor: Vendedor.value,
     Supervisor: Supervisor.value,
     Dia_Visita: DiaVisita.value,
-    Hora_do_Cadastro: horaFormatada_cad,
-})
+    Nome_Solicitante:  Nome_Solicitante_cad.value,  
+    Tel_Solicitante:  Tel_solicitante_cad.value, 
+    Hora_do_Cadastro: horaFormatada_cad, 
+    Observacao: Observacao.value
+} )
 .then(() => {
   
   // Mostrar o modal

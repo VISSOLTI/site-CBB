@@ -32,6 +32,7 @@ var Cod_vend = document.getElementById("cod_vend");
 var Prazo = document.getElementById("prazo");
 var Insbtn = document.getElementById("soli");
 var Tel_solicitante = document.getElementById("tel_solicitante")
+var Obervacao_Prazo = document.getElementById("observacao_prazo")
 
 function formatarCodigo(input) {
   // Remove todos os caracteres que não sejam números
@@ -72,6 +73,7 @@ set(ref(db, "Solicitacao/" + "Cód Cliente: " + Cod_cliente.value +
   " | Tel Solicitante:" + Tel_solicitante.value +
 " | Solicitante: " + funcaoSelecionada),
   {
+      Obervacao_Prazo: Obervacao_Prazo.value,
       Hora_da_Solicitacao: horaFormatada,
   })
   .then(() => {

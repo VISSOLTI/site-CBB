@@ -275,7 +275,7 @@ header {
 #observacao_prazo {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
-    width: 400px; /* Ajuste a largura conforme necessário */
+    width: 95%; /* Ajuste a largura conforme necessário */
     height: 50px; /* Ajuste a altura conforme necessário */
     resize: none; /* Impede o usuário de redimensionar o textarea */
 }
@@ -469,6 +469,12 @@ hr {
 #modalForm #op_Vendedor,
 #modalForm #op_Supervisor,
 #modalForm #op_Cliente {
+    display: inline-block; 
+    margin: 3px;
+}
+#modalForm_cadastro #op_Vendedor_cad,
+#modalForm_cadastro #op_Supervisor_cad,
+#modalForm_cadastro #op_Cliente_cad {
     display: inline-block; 
     margin: 3px;
 }

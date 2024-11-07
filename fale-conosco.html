@@ -215,11 +215,18 @@
           <input type="text" id="supervisor">
           <label for="dia_visita">Dia de Visita</label>
           <input type="text" id="dia_visita">
-
           <label for="nome_solicitante">Nome do Solicitante</label>
           <input type="text" id="nome_solicitante_cad" name="nome_solicitante">
           <label for="tel_solicitante">Telefone do Solicitante</label>
           <input type="text" id="tel_solicitante_cad" placeholder="(00)0000-0000">
+
+          
+          <label id="solicitado_cad"><b>*Solicitado por</b></label>
+          <hr>
+          <label><input id="op_Vendedor_cad" type="radio" name="funcao" value="Vendedor">Vendedor</label>
+          <label><input id="op_Supervisor_cad" type="radio" name="funcao" value="Supervisor">Supervisor</label>
+          <label><input id="op_Cliente_cad" type="radio" name="funcao" value="Cliente">Cliente</label>
+          <hr>
 
           <label for="observacao">Observação</label>
           <textarea id="observacao" placeholder="Digite sua observação" maxlength="50"></textarea> 

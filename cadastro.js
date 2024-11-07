@@ -98,7 +98,7 @@ function Solicitar_cadastro(){
   return;
   }
 
- 
+  const funcaoSelecionada_cad = document.querySelector('input[name="funcao"]:checked').value;
 
   // Validação do e-mail
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -118,7 +118,8 @@ set(ref(db, "Cadastro/" + RazaoSocial.value),
     Supervisor: Supervisor.value,
     Dia_Visita: DiaVisita.value,
     Nome_Solicitante:  Nome_Solicitante_cad.value,  
-    Tel_Solicitante:  Tel_solicitante_cad.value, 
+    Tel_Solicitante:  Tel_solicitante_cad.value,
+    Solicitante: funcaoSelecionada_cad, 
     Hora_do_Cadastro: horaFormatada_cad, 
     Observacao: Observacao.value
 } )

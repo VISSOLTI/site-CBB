@@ -5,8 +5,15 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.0/firebas
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
- 
+  apiKey: "AIzaSyBHLQdJu-uAU7RXw_Vcc74f5DXfmLxq9yQ",
+  authDomain: "vend-103.firebaseapp.com",
+  databaseURL: "https://vend-103-default-rtdb.firebaseio.com",
+  projectId: "vend-103",
+  storageBucket: "vend-103.firebasestorage.app",
+  messagingSenderId: "518517071501",
+  appId: "1:518517071501:web:a1cfdc28b50481b7700cc4"
 };
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 

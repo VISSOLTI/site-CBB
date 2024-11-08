@@ -25,7 +25,14 @@ function login() {
         "600@vissol.com.br": { password: "!600_sup_j", page: "paginas_supervisores/pagina7.html" },
         "700@vissol.com.br": { password: "*700_sup_h", page: "paginas_supervisores/pagina8.html" },
         "750@vissol.com.br": { password: "!750_sup_g", page: "paginas_supervisores/pagina9.html" },
-        "geral00@vissol.com.br": { password: "*010_ger_x", page: "paginas_supervisores/pagina00.html" }
+        "geral00@vissol.com.br": { password: "*010_ger_x", page: "paginas_supervisores/pagina00.html" },
+
+        "101@vissol.com.br": { password: "q101_vend_t", page: "paginas_supervisores/pagina_101.html" },
+        "102@vissol.com.br": { password: "g102_vend_u", page: "paginas_supervisores/pagina_102.html" },
+        "103@vissol.com.br": { password: "y103_vend_i", page: "paginas_supervisores/pagina_103.html" },
+        "105@vissol.com.br": { password: "p105_vend_o", page: "paginas_supervisores/pagina_105.html" },
+        "106@vissol.com.br": { password: "m106_vend_p", page: "paginas_supervisores/pagina_106.html" },
+        "107@vissol.com.br": { password: "a107_vend_h", page: "paginas_supervisores/pagina_107.html" },
     };
 
     if (users[email] && users[email].password === password) {

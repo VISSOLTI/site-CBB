@@ -54,9 +54,11 @@ function formatarDocumento(input) {
   input.value = documento;
 }
 
+
 CnpjCpf.addEventListener('input', () => {
   formatarDocumento(CnpjCpf);
 });
+
 
 // Função para formatar o número de telefone enquanto o usuário digita
 function formatarTelefone(telefone) {
@@ -81,6 +83,8 @@ function closeModal() {
   const modal = document.getElementById('modalSucesso');
   modal.style.display = 'none';
 }
+
+//const cod = document.getElementById('razao_social').value;
 
 function Solicitar_cadastro(){
   const dataHora_cad = new Date();
@@ -107,7 +111,10 @@ function Solicitar_cadastro(){
       return;
   }
 
-set(ref(db, "Cadastro/" + RazaoSocial.value),
+  // Remover caracteres . / , do campo RazaoSocial
+  const razaoSocialSemCaracteres = RazaoSocial.value.replace(/[.,/]/g, '');
+
+set(ref(db, "Cadastro/" + razaoSocialSemCaracteres),
 {
     Cnpj_CPF: CnpjCpf.value,
     Nome_Fantasia: NomeFantasia.value,

@@ -7,7 +7,6 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.0/firebas
 const firebaseConfig = {
   apiKey: "AIzaSyCZo-mbXpCsfYkvdDFcWmV9kGZ8LY3SrZk",
     authDomain: "vend-102.firebaseapp.com",
-    databaseURL: "https://vend-102-default-rtdb.firebaseio.com",
     projectId: "vend-102",
     storageBucket: "vend-102.firebasestorage.app",
     messagingSenderId: "34607651422",

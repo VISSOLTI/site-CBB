@@ -28,7 +28,7 @@ var RazaoSocial = document.getElementById("razao_social");
 var CnpjCpf = document.getElementById("cnpj_cpf"); 
 var NomeFantasia = document.getElementById("nome_fantasia");
 var Canal = document.getElementById("canal");
-var TelWhats = document.getElementById("tel_whats");
+var TelCliente = document.getElementById("tel_cliente");
 var Email = document.getElementById("e_mail");
 var Vendedor = document.getElementById("vendedor");
 var Supervisor = document.getElementById("supervisor");
@@ -70,7 +70,7 @@ function formatarTelefone(telefone) {
 }
 
 // Adiciona um listener de evento para o input do telefone
-document.getElementById('tel_whats').addEventListener('input', function() {
+document.getElementById('tel_cliente').addEventListener('input', function() {
   var telefone = this.value;
   this.value = formatarTelefone(telefone);
 });
@@ -119,7 +119,7 @@ set(ref(db, "Cadastro/" + razaoSocialSemCaracteres),
     Cnpj_CPF: CnpjCpf.value,
     Nome_Fantasia: NomeFantasia.value,
     Canal: Canal.value,
-    Tel_Whats_App: TelWhats.value,
+    Tel_Cliente: TelCliente.value,
     Email: Email.value,
     Vendedor: Vendedor.value,
     Supervisor: Supervisor.value,

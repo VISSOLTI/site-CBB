@@ -54,7 +54,10 @@ body {
 
 .title {
     color: #f09102;
-    margin: 30px;
+    margin: 0px;
+    width: 300px;
+    text-align: center;
+    font-size: 23px;
 }
 #codigo {
     text-align: center;
@@ -74,9 +77,18 @@ body {
     width: 300px;
     margin: 0 auto;
 }
+.form-group-container-0 label {
+    font-size: 20px;
+}
+.form-group-container-0 #codigo {
+    margin: 10px;
+}
+.form-group-container-0 h1 {
+    margin: 10px;
+}
 .form-group-container-0  label #codigo,
 .form-group-container-0  button {
-    margin:  10px;
+    margin:  5px;
 }
 .form-group-container-1,
 .form-group-container-2,
@@ -102,17 +114,17 @@ body {
 
 .form-group-container-1 span #texto43,
 .form-group-container-1 span #texto10 {
-    margin: 0 auto;
+    margin: 10px auto;
 }
+
 .form-group-container-2 span #texto45,
 .form-group-container-2 span #texto13,
 .form-group-container-2 span #texto8,
 .form-group-container-2 span #texto12,
 .form-group-container-2 span #texto11,
 .form-group-container-2 span #texto9 {
-    margin: 0 auto;
+    margin: 10px auto;
 }
-
 
 .form-group-container-3 span #texto1,
 .form-group-container-3 span #texto2,
@@ -129,16 +141,14 @@ body {
 .form-group-container-3 span #texto19,
 .form-group-container-3 span #texto14,
 .form-group-container-3 span #texto33 {
-    margin: 0 auto;
+    margin: 10px auto;
 }
-
 
 .container-logo {
     display: flex; /* Transforma em um container flexbox */
     justify-content: center; /* Centraliza os itens dentro do container */
     align-items: center; /* Alinha os itens verticalmente no centro */
 }
-
 .container-logo img {
     width: 100px; /* Define a largura da imagem */
     height: auto; /* Mantém a proporção da imagem */
@@ -146,7 +156,6 @@ body {
     border-radius: 5px;
     margin: 15px;
 }
-
 
 input {
     width: 180px;
@@ -166,7 +175,6 @@ button {
 .sair {
     background-color: rgb(219, 86, 86);
 }
-
 
 table {
     display: block;
@@ -198,7 +206,7 @@ span {
     font-size: 20px;
     color: #f09102;
     font-weight: bold;
-    margin: 1px;
+    margin: 0px;
     
 }
 p {
@@ -212,7 +220,7 @@ p {
  #texto43 {
     padding: 5px;
     height: 25px;
-    width: 420px;
+    width: 350px;
     margin: 20px;
 }
 #texto10 {
@@ -231,7 +239,7 @@ p {
     padding: 5px;
     margin: 0 auto;
     height: 20px;
-    width: 400px;
+    width: 350px;
 }
 #texto12,
 #texto11,
@@ -239,7 +247,7 @@ p {
     padding: 5px;
     margin: 0 auto;
     height: 20px;
-    width: 430px;
+    width: 350px;
 }
 
 

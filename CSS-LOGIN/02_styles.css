@@ -29,10 +29,8 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 #codigo {
-    
     font-size: 18px;
     height: 15px;
-
 }
 #container-teste {
     display:flex;

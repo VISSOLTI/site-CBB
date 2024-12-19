@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e4e2e2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: rgb(84, 87, 87);
+  }
+  .container h3 {
+    color: #ccc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .risca-1 {
+    border: 1px solid #4BC9F3;
+    border-radius: 50px;
+    width: 800px;
+    margin: 15px;
+}
+  .document-list-container {
+    display: flex; /* Hace que los elementos hijos sean flex items */
+    justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+  }
+  .document-list {
+    width: 45%; /* Establece el ancho de cada columna */
+  }
+  .container form {
+    text-align: center;
+  }
+  li {
+    list-style: none;
+    
+  }
+  h1 {
+    text-align: center;
+  }
+  .container h2 {
+    color: rgb(44, 209, 44);
+    font-family:  Arial, Helvetica, sans-serif;
+  }
+  
+  .document-list {
+    margin: 10px;
+    border: 1px solid #4BC9F3;
+    border-radius: 5px;
+  }
+ .document-list h2 {
+    color: #4BC9F3;
+  }
+  input {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #4BC9F3;
+    border-radius: 3px;
+    color: #ccc;
+  }
+  button {
+    background-color: #4BC9F3;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 10px;
+  }
+  p {
+    text-align: center;
+    font-size: 14px;
+  }
+  a {
+    text-decoration: none;
+    color: #0077b5;
+  }
+  span {
+    font-size: 18px;
+    font-weight: 700;
+    color: #F09102;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .document-list li span {
+    flex: 1; /* Permite que o span ocupe todo o espaço disponível antes do input */
+    text-align: center; /* Centraliza o texto horizontalmente dentro do span */
+  }
+  .document-list-container  {
+    display: flex;
+    justify-content: center;
+  }
+ .document-list ul {
+    list-style: none;
+    padding: 0;
+}
+.document-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.document-list li input[type="file"] {
+    margin-top: 5px;
+}

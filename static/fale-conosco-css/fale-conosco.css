@@ -123,7 +123,7 @@ header {
     background-position: right;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url('comercial.jpeg');
+    background-image: url('img-fale-conosco.jpg');
     display: flex;
     justify-content: left;
     align-items: center;
@@ -139,10 +139,11 @@ header {
     background-color: #303030;
     opacity: 0.7;
 }
+
 .container01 .container-text {
     color: #fff;
     text-shadow: 1px 1px 1px #24252a;
-    width: 500px;
+    width: 650px;
     margin-left: 70px;
 }
 .container01 .container-text h2 {
@@ -153,6 +154,11 @@ header {
     line-height: 30px;
     font-size: 24.5px;
 }
+.container01 .risca-1 {
+    display: none;
+}
+
+/*---------------------*/
 .container {
     display: flex; /* Enable flexbox layout */
     flex-direction: column; /* Arrange items vertically */
@@ -161,7 +167,8 @@ header {
     padding: 0px;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
+  }
+  
   .list-item,
   .list-item-icones,
   .list-item-cadastro {
@@ -185,7 +192,15 @@ header {
     width: 80px;
     border-radius: 10px;
   }
-  
+  .list-item p,
+  .list-item-consulta p,
+  .list-item-consulta_cnpj p {
+    flex-grow: 1;  
+    margin-top: 10px;
+    color: #808080;
+    font-size: 23px;
+    margin: 7px;
+  }
   .list-item .Insbtn {
     margin-left: auto; /* Move button to the right */
     padding: 5px 10px;
@@ -229,24 +244,43 @@ header {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
   }
-  .modal h2,
-  .modal_cadastro h2  {
+.modal h2,
+.modal_cadastro h2  {
+    color: #F09102;
     margin: 20px;
   }
-  .modal-content,
-  .modal-content_cadastro {
+.modal-content,
+.modal-content_cadastro {
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
     width: 22%; /* Could be more or less, depending on design */ /**/
-  }
+}
   
-  #modalForm label,
-  #modalForm_cadastro label{
+#modalForm label,
+#modalForm_cadastro label,
+ .obs {
     color: #808080;
     font-size: 18px;
-  }
+}
+
+#modalForm input,
+#modalForm textarea {
+    margin: 5px;
+}
+#modalForm_cadastro  input,
+#modalForm_cadastro textarea {
+    margin: 5px;
+}
+#observacao,
+#observacao_prazo {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    width: 95%; /* Ajuste a largura conforme necessário */
+    height: 50px; /* Ajuste a altura conforme necessário */
+    resize: none; /* Impede o usuário de redimensionar o textarea */
+}
   /* Close Button Styles */
   .close-button,
   .close-button_cadastro {
@@ -264,28 +298,235 @@ header {
     text-decoration: none;
     cursor: pointer;
   }
-
-.ped-peq {
-    background-color: #FF9700;
-    border-radius: 150px;
-    height: 100px;
+  /* MODAL APÓS CADASTRO */
+.sol_enviada {
+    color: rgb(44, 209, 44);
+    font-family:  Arial, Helvetica, sans-serif;
+}
+.msg {
+    text-align: center;
+}
+.modal-content {
+    background-color: #394147;
+    border-radius: 10px;
+    color: #e4e2e2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   
+}
+h3 {
+    color: #4BC9F3;
+}
+.modal-content p {
+    font-size: 18px;
+    margin: 5px;
+}
+.modal-content  a {
+    color: #f09102;
+    font-weight: bolder;
+    text-decoration: none;
+}
+.modal-content ion-icon {
+    color: #f09102;
+}
+.modal-content  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.modal-content button {
+    height: 35px;
     width: 100px;
-    box-shadow: 1px 1px 1px 1px #24252a;
+    border-radius: 5px;
+    background-color: rgb(213, 42, 42);
+    color: #e4e2e2;
+    font-size: 16px;
+    margin: 10px;
+}
+.email_cad {
+    color: #F09102;
+}
+
+/* Consultas Comercial e Cliente */
+.container-consulta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 450px;
+    background: #e4e2e2;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+.container-consulta h2 {
+    display: flex;
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    justify-content: space-between;
+}
+.container-consulta h2 ion-icon {
+    background-color: #e4e2e2;
+    color: black;
+    border-radius: 10px;
+    display: flex;
+    cursor: pointer;
+}
+.container-consulta h2 ion-icon:hover {
+    background-color: black;
+    color: #e4e2e2;
+    transition: 1s;
+}
+.title h2 {
+    text-align: center;
+    color: #f09102;
+}
+#cnpjContent h2,
+#clienteContent h2 {
+    color: #F09102;
+}
+.container-consulta #consulta-cnpj_cpf,
+.container-consulta #consulta-cod_cli {
+    width: 380px;
+    margin-bottom: 20px;
+}
+#cod,
+#ficha,
+#v1,
+#v2,
+#ficha_cli,
+#v1_cli,
+#v2_cli {
+  color: #F09102;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 19px;
+  margin: auto 65px;
+  height: 30px;
+  width: 250px;
+}
+#cnpjContent #Selbtn,
+#clienteContent #btnCli {
+  margin: auto 150px;
+  background-color: #007bff;
+  color: #ECECEE;
+}
+.search input{
+  height: 35px;
+  width: 100%;
+  color: #808080;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+  box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+}
+.search input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.container-consulta button {
+  padding: 5px;
+  margin: 5px;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  background-color: #007bff;
+  color: #ECECEE;
+}
+.form-field  {
+    position: relative; /* Necessary for absolute positioning of the icon */
+}
+#fechado {
     position: absolute;
-    left: 200px;
-    margin-top: 225px;
-}
-.ped-peq img {
-    height: 100px;
-    width: 100px;
-    margin: 0px;
-    padding: 0px;
-}
-.ped-peq:hover { 
-    scale: 1.2;
-    transition: 1s
+    top: 40px;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    height: 20px;
 }
 
+/* Form Styles (same as before) */
+#modalForm input[type="text"],
+#modalForm input[type="number"],
+#modalForm_cadastro input[type="text"],
+#modalForm_cadastro input[type="number"],
+#modalForm_cadastro input[type="email"],
+#modalForm_cadastro input[type="date"],
+#modalForm_cadastro input[type="tel"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#cod_cliente,
+#razao_social_2,
+#nome_solicitante,
+#name_sup,
+#name_vend,
+#cod_vend,
+#prazo,
+#tel_solicitante,
+#observacao{
+    margin: 6px;
+}
+hr {
+    margin: 12px;
+}
+#modalForm #op_Vendedor,
+#modalForm #op_Supervisor,
+#modalForm #op_Cliente {
+    display: inline-block; 
+    margin: 3px;
+}
+#modalForm_cadastro #op_Vendedor_cad,
+#modalForm_cadastro #op_Supervisor_cad,
+#modalForm_cadastro #op_Cliente_cad {
+    display: inline-block; 
+    margin: 3px;
+}
+.btn {
+    margin: 5px; /**/
+    height: 30px;
+    width: 120px;
+    text-align: center;
+    background-color: #007bff;
+    color: #ECECEE;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+ #numero,
+ #numero_cnpj {
+    font-size: 16px;
+    height: 30px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px #303030;
+    margin-left: 30px;
+ }
+ #buscar,
+ #buscar_cnpj
+  {
+    height: 30px;
+    width: 70px;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #ECECEE;
+    margin: 5px;
+ }
+ .list-item-consulta #resultado,
+ .list-item-consulta_cnpj #resultado_cnpj {
+    margin-top: 10px;
+    height: 40px;
+    width: 350px;
+    text-align: center;
+    color: #f09102;
+    font-size: 19px;
+    font-weight: 600;
+}
+/*---------------------*/
 .risca-1 {
     border: 1px solid #4BC9F3;
     border-radius: 50px;
@@ -295,9 +536,12 @@ header {
 .risca {
     border: 1px solid #4BC9F3;
     border-radius: 50px;
-    width: 300px;
+    width: 400px;
 }
-
+.text h3 {
+    font-size: 30px;
+    color: #4BC9F3;
+}
 .text ul  {
     display: flex;
     flex-direction: column;
@@ -306,11 +550,22 @@ header {
     list-style: none;
 }
 .text li {
-    margin: 0px;
-    font-size: 26px;
-    font-weight: 400;
+    color: #808080;
+    margin: 5px;
+    font-size: 23px;
 }
-
+.text span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #ECECEE;
+    border: 2px solid #f09102;
+    height: 200px;
+    width: 200px;
+    border-radius: 150px;
+    margin-right: 0px;
+}
 .container-text a {
     color: #f09102;
     text-decoration: none;
@@ -321,19 +576,40 @@ header {
 .text .canais-cadastro {
     color: #24252a;
 }
-
-
+.container-canal {
+    display: flex;
+    width: 500px;
+    flex-direction: column;
+}
+.container-atendimento {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    border-radius: 10px;
+}
+.container-atendimento h3 {
+    color: #808080;
+    margin: 5px;
+    font-size: 23px;
+} 
+.title {
+    color: #464646;
+    background-color: #ECECEE;
+    text-align: center;
+}
 .ped {
     background-color: #FF9700;
     border-radius: 150px;
-    height: 130px;
-    width: 130px;
+    height: 90px;
+    width: 90px;
     box-shadow: 1px 1px 1px 1px #24252a;
 }
 .ped img,
 .cadastro img {
-    height: 130px;
-    width: 130px;
+    height: 90px;
+    width: 90px;
     margin: 0px;
     padding: 0px;
     border-radius: 150px;
@@ -343,12 +619,31 @@ header {
 }
 .container03 {
     background-color: #fff;
-    height: 500px;
+    height: 750px;
     width: 100vw;
     margin-top: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+}
+.container03 h3 {
+    margin-top:15px;
+    color: #f09102;
+}
+.container-text span {
+    color: #808080;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.container03 .container-text a {
+    color: #808080;
+}
+.container03 .container-text ion-icon {
+    margin: 5px;
 }
 .container03 .container-text .risca {
     display: flex;
@@ -357,16 +652,7 @@ header {
     text-align: center;
     flex-direction: row;
     width: 500px;
-  }
-.container-text span {
-    color: #808080;
-    font-size: 17px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 15px;
 }
-
 
 .container-whats {
     height: 150px;
@@ -412,7 +698,6 @@ header {
     height: 300px;
     width: 100vw;
 }
-
 .roda_pe {
     margin-top: 0px;
     height: 450px;
@@ -525,4 +810,11 @@ footer h1 {
 .logo-site-mobile {
     display: none;
 }
+
+
+
+
+
+
+
 

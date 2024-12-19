@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=p, initial-scale=1.0">
+    <link rel="shortcut icon" href="../static/img/favi_icons/icon-cbb.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../static/fale-conosco-css/modal_upload.css">
+    <link rel="stylesheet" href="../static/fale-conosco-css/mq_modal_upload.css">
+  <title>CBB Distribuidora</title>
+</head>
+<body>
+  
+    <div class="container">
+        <form action="/upload_file" method="post" enctype="multipart/form-data">
+            <h2>Solicitação enviada com sucesso!</h2>
+            <h3>O setor de cadastro entrará em contato para solicitar documentos adicionais caso necessário.</h3>
+            <p><span class="email_cad"><ion-icon name="mail-outline"></ion-icon>cadastro@skvissol.com.br</span></p>
+            <div class="risca-1"></div>
+          <div class="document-list-container">
+            <div class="document-list">
+              <h2>Documentos PJ:</h2>
+              <ul>
+                <li><span>CNH ou RG do Sócio ADM</span> <input type="file" name="file1"></li>
+                <li><span>Comprovante de Residência</span><input type="file" name="file2"></li>
+                <li><span>Foto da Fachada</span>   <input type="file" name="file3"></li>
+                <li><span>Ficha de Cadastro</span> <input type="file" name="file4"></li>
+              </ul>
+            </div>
+            <div class="document-list">
+              <h2>Documentos PF:</h2>
+              <ul>
+                <li><span>CNH ou RG</span> <input type="file" name="file5"></li>
+                <li><span>Comprovante de Residência</span>    <input type="file" name="file6"></li>
+                <li><span>Foto da Fachada</span> <input type="file" name="file7"></li>
+                <li><span>Ficha de Cadastro</span> <input type="file" name="file8"></li>
+              </ul>
+            </div>
+          </div>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+</body>
+</html>

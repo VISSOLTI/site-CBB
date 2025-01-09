@@ -667,24 +667,33 @@ h2 {
   border-radius: 5px;
   margin: 20px;
   width: 340px;
-  height: 100px;
+  height: 50px;
 }
-.list-item p,
-.list-item-icones p, 
-.list-item-consulta p,
+.list-item-icones p,
 .list-item-cadastro p,
-.list-item-consulta_cnpj p  {
-  flex-grow: 1; 
-  margin: 0; 
-  margin-top: 15px;
+.list-item p,
+.list-item-consulta p,
+.list-item-consulta_cnpj p {
+  flex-grow: 1;  
+  margin-top: 10px;
   color: #808080;
   font-size: 18px;
+  margin: 7px;
 }
-.list-item-cadastro img {
-  height: 55px;
-  width: 55px;
-  border-radius: 10px;
+#btn-ped,
+#openModalButton, 
+#openModalButton_cadastro {
+  padding: 10px 10px;
+  border: none;
+  font-size: 13px;
+  border: 2px solid #24252a;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
 }
+
+
 .list-item .Insbtn {
   margin-left: auto; 
   padding: 5px 10px;
@@ -697,16 +706,7 @@ h2 {
 .list-item .Insbtn:hover {
   background-color: #0056b3; 
 }
-#openModalButton {
-  padding: 1px 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: #007bff;
-  color: white;
-  height: 40px;
-  margin-top: 15px;
-}
+
 .modal {
   display: none; 
   position: fixed; 

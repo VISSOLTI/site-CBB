@@ -1,5 +1,5 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -18,7 +18,7 @@ const app = initializeApp(firebaseConfig);
 
 
 import {getDatabase, ref, get, set, child, update, remove}
-from "https://www.gstatic.com/firebasejs/10.13.0/firebase-database.js"
+from "https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js"
 
 const db = getDatabase();
 
@@ -31,11 +31,12 @@ var TelCliente = document.getElementById("tel_cliente");
 var Email = document.getElementById("e_mail");
 var Vendedor = document.getElementById("vendedor");
 var Supervisor = document.getElementById("supervisor");
-
+var DiaVisita = document.getElementById("dia_visita");
 var Nome_Solicitante_cad = document.getElementById("nome_solicitante_cad")
 var Tel_solicitante_cad = document.getElementById("tel_solicitante_cad")
 var Observacao = document.getElementById("observacao")
 var btnEnviar = document.getElementById("cadastro");
+var btnClose = document.getElementById("closeModal")
 
 
 function formatarDocumento(input) {
@@ -51,6 +52,7 @@ function formatarDocumento(input) {
 
   input.value = documento;
 }
+
 
 CnpjCpf.addEventListener('input', () => {
   formatarDocumento(CnpjCpf);
@@ -84,21 +86,23 @@ function closeModal() {
 //const cod = document.getElementById('razao_social').value;
 
 function Solicitar_cadastro(){
-
   const dataHora_cad = new Date();
   const horaFormatada_cad = dataHora_cad.toLocaleString();
 
+
+  // Condição para o preenchimento Razão Social
   if (RazaoSocial.value === '') {
-    alert("Preencha o campo Razão Social");
+    alert("Preencha o Razao Social!");
     return;
   }
-
-
-  const diaSelecionado_cad = document.querySelector('input[name="dia"]:checked').value;
+  // Condição para o preenchimento do CNPJ/CPF
+  if (CnpjCpf.value === '') {
+  alert("Preencha o CNPJ/CPF");
+  return;
+  }
 
   const funcaoSelecionada_cad = document.querySelector('input[name="funcao"]:checked').value;
 
-  
   // Validação do e-mail
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(Email.value)) {
@@ -118,7 +122,7 @@ set(ref(db, "Cadastro/" + razaoSocialSemCaracteres),
     Email: Email.value,
     Vendedor: Vendedor.value,
     Supervisor: Supervisor.value,
-    Dia_Visita: diaSelecionado_cad,
+    Dia_Visita: DiaVisita.value,
     Nome_Solicitante:  Nome_Solicitante_cad.value,  
     Tel_Solicitante:  Tel_solicitante_cad.value,
     Solicitante: funcaoSelecionada_cad, 
@@ -127,6 +131,9 @@ set(ref(db, "Cadastro/" + razaoSocialSemCaracteres),
 } )
 .then(() => {
   
+  // Mostrar o modal
+  //const modal = document.getElementById('modalSucesso');
+  //modal.style.display = 'block'
 
   // Aguardar um tempo (opcional) antes de redirecionar
   setTimeout(() => {
@@ -141,6 +148,6 @@ set(ref(db, "Cadastro/" + razaoSocialSemCaracteres),
 }
 
 
-
+btnClose.addEventListener('click', closeModal);
 btnEnviar.addEventListener('click', Solicitar_cadastro);
 

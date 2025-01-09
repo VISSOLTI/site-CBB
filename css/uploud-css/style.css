@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
+body {
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0px 80px;
+    text-align: center;
+}
+.container_00 {
+  background: #e4e2e2;
+  border-radius: 5px;
+  padding: 15px;
+}
+.risca-1 {
+  border: 1px solid #4BC9F3;
+  border-radius: 50px;
+  width: 900px;
+  margin: 0 auto;
+}
+.logo-cbb {
+  height: 20px;
+  width: 250px;
+}
+.document-list li span {
+  flex: 1; /* Permite que o span ocupe todo o espaço disponível antes do input */
+  text-align: center; /* Centraliza o texto horizontalmente dentro do span */
+}
+.document-list-container  {
+  display: flex;
+  justify-content: center;
+}
+.document-list ul {
+  list-style: none;
+  padding: 0;
+}
+.document-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.document-list li input[type="file"] {
+  margin-top: 5px;
+}
+.document-list-container {
+  display: flex; /* Hace que los elementos hijos sean flex items */
+  justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+}
+.document-list {
+  width: 45%; /* Establece el ancho de cada columna */
+}
+.container form {
+  text-align: center;
+}
+li {
+  list-style: none;
+}
+h1 {
+  text-align: center;
+}
+.container h2 {
+  color: #0077b5;
+  font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container h3 {
+  color: gray;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+.document-list h1 {
+  color: #F09102;
+}
+input {
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  
+}
+
+p {
+  text-align: center;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  color: #0077b5;
+}
+
+span {
+  font-size: 20px;
+  font-weight: 600;
+  color: #F09102;
+  margin: 5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   
+}
+.voltar {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 17px;
+  width: 10%;
+  color: #fff;
+  border-radius: 5px;
+  background-color: rgb(17, 170, 17);
+  cursor: pointer;
+  outline: none;
+  margin: 40px auto;
+ 
+}
+h1{
+    color: #4BC9F3;
+}
+.upload-area{
+    width: 100%;
+}
+.upload{
+  font-size: 15px;
+    background-color: rgba(0, 153, 255);
+    border: 1px solid rgba(0, 153, 255);
+    font-family: 'Noto Sans', sans-serif;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    margin: 10px;
+    width: 180px;
+}
+.upload:active{
+    border-color: white;
+}
+.progress-container{
+    display: flex;
+    width: 50%;
+    border: 2px solid #F09102;
+    background: #fff;
+    height: 40px;
+    top: 0px;
+    padding: 2px;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+.progress{
+    width: 0%;
+    background-color: #F09102;
+    height: 100%;
+    transition-duration: .3s;
+}
+.percent{
+  display: inline-block;
+  margin-left: 0px;
+  color: #F09102;
+}
+.resume{
+    display: none;
+}
+
+

@@ -167,41 +167,30 @@ header {
     padding: 0px;
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
+}
   
-  .list-item,
-  .list-item-icones,
-  .list-item-cadastro {
+.list-item,
+.list-item-icones,
+.list-item-cadastro {
     display: flex; /* Enable flexbox layout for each list item */
     margin: 20px; /* Add spacing between list items */
     text-align: center;
     border-radius: 5px;
     width: 850px;
-  }
-  .list-item-icones p,
-  .list-item-cadastro p {
-    flex-grow: 1;  
-    margin-top: 10px;
-    color: #808080;
-    font-size: 23px;
-    
-    margin: 30px;
-  }
-  .list-item-cadastro img {
-    height: 80px;
-    width: 80px;
-    border-radius: 10px;
-  }
-  .list-item p,
-  .list-item-consulta p,
-  .list-item-consulta_cnpj p {
+}
+.list-item-icones p,
+.list-item-cadastro p,
+.list-item p,
+.list-item-consulta p,
+.list-item-consulta_cnpj p {
     flex-grow: 1;  
     margin-top: 10px;
     color: #808080;
     font-size: 23px;
     margin: 7px;
-  }
-  .list-item .Insbtn {
+}
+
+.list-item .Insbtn {
     margin-left: auto; /* Move button to the right */
     padding: 5px 10px;
     border: none;
@@ -209,31 +198,27 @@ header {
     cursor: pointer;
     background-color: #007bff; /* Blue background */
     color: white;
-  }
-  
-  .list-item .Insbtn:hover {
+}
+
+.list-item .Insbtn:hover {
     background-color: #0056b3; /* Darker blue on hover */
-  }
-  
+}
   /* Button Styles */
-  #openModalButton {
+  #btn-ped,
+  #openModalButton, 
+  #openModalButton_cadastro {
     padding: 10px 20px;
-    border: none;
+    font-size: 18px;
+    border: 2px solid #24252a;
     border-radius: 5px;
     cursor: pointer;
     background-color: #007bff;
     color: white;
   }
-  #openModalButton_cadastro {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    color: white;
-  }
+ 
   /* Modal Styles */
-  .modal,
-  .modal_cadastro {
+.modal,
+.modal_cadastro {
     display: none; /* Initially hidden */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -243,12 +228,12 @@ header {
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-  }
+}
 .modal h2,
 .modal_cadastro h2  {
     color: #F09102;
     margin: 20px;
-  }
+}
 .modal-content,
 .modal-content_cadastro {
     background-color: #fefefe;
@@ -280,18 +265,18 @@ header {
     resize: none; /* Impede o usuário de redimensionar o textarea */
 }
   /* Close Button Styles */
-  .close-button,
-  .close-button_cadastro {
+.close-button,
+.close-button_cadastro {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
+}
   
-  .close-button:hover,
-  .close-button:focus,
-  .close-button_cadastro:hover,
-  .close-button_cadastro:focus {
+.close-button:hover,
+.close-button:focus,
+.close-button_cadastro:hover,
+.close-button_cadastro:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
@@ -495,34 +480,6 @@ hr {
     border-radius: 5px;
     cursor: pointer;
   }
- #numero,
- #numero_cnpj {
-    font-size: 16px;
-    height: 30px;
-    border-radius: 10px;
-    box-shadow: 1px 1px 1px 1px #303030;
-    margin-left: 30px;
- }
- #buscar,
- #buscar_cnpj
-  {
-    height: 30px;
-    width: 70px;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: #ECECEE;
-    margin: 5px;
- }
- .list-item-consulta #resultado,
- .list-item-consulta_cnpj #resultado_cnpj {
-    margin-top: 10px;
-    height: 40px;
-    width: 350px;
-    text-align: center;
-    color: #f09102;
-    font-size: 19px;
-    font-weight: 600;
-}
 /*---------------------*/
 .risca-1 {
     border: 1px solid #4BC9F3;

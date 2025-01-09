@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=p, initial-scale=1.0">
     <link rel="shortcut icon" href="favi_icons/icon-cbb.jpg" type="image/x-icon">
-    
     <link rel="stylesheet" href="css/fale-conosco-css/fale-conosco.css">
     <link rel="stylesheet" href="css/fale-conosco-css/mq_fale-conosco.css">
     <link rel="stylesheet" href="css/global-carousel/style.css">
@@ -164,27 +163,18 @@
 <div class="container">
   <div class="risca-1"></div>
   <div class="list-item-icones">
-    <p>Clique no icone ao lado para fazer seu pedido pelo Ped +</p>
-    <div class="ped">
+    <p>Faça seu pedido pelo Ped +</p>
       <a  href="https://wa.me/551149508273?text=Olá, quero falar com o atendimento da CBB Distribuidora!" target="_blank">
-        <img src="imagens/ped+.png" width="0" alt="Fale Conosco pelo WhatsApp" title="Acesse o ped +">
+        <button id="btn-ped">Ped +</button>
       </a>
     </div>
-  </div>
-<!--
-  <div class="list-item-icones">
-    <p>Clique no icone ao lado para fazer seu cadastro conosco</p>
-    <div class="cadastro">
-      <a href="https://wa.me/5511972406343?text=Olá, quero falar com o atendimento da CBB Distribuidora!" target="_blank">
-        <img src="imagens/cadastro-icon.jpg" width="50" alt="Fale Conosco pelo WhatsApp" title="Faça seu cadastro!">
-      </a>
-    </div>
-  </div>
--->
+    
+ <!--CADASTRO-->   
   <div class="risca-1"></div>
   <div class="list-item-cadastro">
-    <p>Clique no icone ao lado para fazer seu cadastro conosco</p>
-    <button id="openModalButton_cadastro"><img src="imagens/cadastro-icon.jpg" width="50" title="Faça seu cadastro!"></button>
+    <p>Faça seu cadastro</p>
+    <button id="openModalButton_cadastro">Cadastro</button>
+
     <div id="modal_cadastro" class="modal_cadastro">
       <div class="modal-content_cadastro">
         <span class="close-button_cadastro">&times;</span>
@@ -207,55 +197,40 @@
           <label for="supervisor">Supervisor</label>
           <input type="text" id="supervisor">
           <label for="dia_visita">Dia de Visita</label>
-          <input type="text" id="dia_visita">
+          <hr>
+          <label><input id="op_Segunda_cad" type="radio" name="dia" value="Segunda">Segunda</label>
+          <label><input id="op_Terça_cad" type="radio" name="dia" value="Terça">Terça</label>
+          <br>
+          <label><input id="op_Quarta_cad" type="radio" name="dia" value="Quarta">Quarta</label>
+          <label><input id="op_Quinta_cad" type="radio" name="dia" value="Quinta">Quinta</label>
+          <label><input id="op_Sexta_cad" type="radio" name="dia" value="Sexta">Sexta</label>
+          <hr>
           <label for="nome_solicitante">Nome do Solicitante</label>
           <input type="text" id="nome_solicitante_cad" name="nome_solicitante">
           <label for="tel_solicitante">Telefone do Solicitante</label>
           <input type="text" id="tel_solicitante_cad" placeholder="(00)0000-0000">
           <label id="solicitado_cad"><b>*Solicitado por</b></label>
           <hr>
-          <label><input id="op_Vendedor_cad" type="radio" name="funcao" value="Vendedor">Vendedor</label>
           <label><input id="op_Supervisor_cad" type="radio" name="funcao" value="Supervisor">Supervisor</label>
+          <label><input id="op_Vendedor_cad" type="radio" name="funcao" value="Vendedor">Vendedor</label>
+          <br>
           <label><input id="op_Cliente_cad" type="radio" name="funcao" value="Cliente">Cliente</label>
+          <label><input id="op_Vissol_cad" type="radio" name="funcao" value="Vissol">Vissol</label>
           <hr>
-
           <label for="observacao">Observação</label>
           <textarea id="observacao" placeholder="Digite sua observação" maxlength="50"></textarea> 
-
           <input type="button" value="Enviar Cadastro" id="cadastro" class="btn">
         </form>
       </div>
     </div>
+
   </div> 
 
-  <!---->
-  <div id="modalSucesso" class="modal">
-    <div class="modal-content">
-      <p class="sol_enviada">Solicitação enviada com sucesso!</p>
-      <p class="msg">O setor de cadastro entrará em contato para solicitar documentos adicionais caso necessário.</p>
-      <p class="msg">Envie seus documentos no email abaixo:</p>
-      <p><span class="email_cad"><ion-icon name="mail-outline"></ion-icon>cadastro@skvissol.com.br</span></p>
-      <!--<a href="mailto:cadastro@skvissol.com.br?subject=Documentos de Cadastro: &body=DOCUMENTOS PJ: | CNH ou RG do Sócio ADM | Comprovante de Residência | Foto da Fachada | Ficha de Cadastro | DOCUMENTOS PF: | CNH ou RG | Comprovante de Residência | Foto da Fachada | Ficha de Cadastro ">Enviar Docs</a>-->
-      
-      <h3>Documentos PJ:</h3> 
-      <p>- CNH ou RG do Sócio ADM</p>
-      <p>- Comprovante de Residência</p>
-      <p>- Foto da Fachada</p>
-      <p>- Ficha de Cadastro</p> 
-      <h3>Documentos PF:</h3>
-      <p>- CNH ou RG</p>
-      <p>- Comprovante de Residência</p>
-      <p>- Foto da Fachada</p>
-      <p>- Ficha de Cadastro</p>
-      <button id="closeModal">Sair</button>
-    </div>
-  </div>
-
-
+  
 <!--ALTERAÇÃO DE PRAZO-->
   <div class="risca-1"></div>
   <div class="list-item">
-    <p>Clique no botão ao lado para alteração de prazo</p>
+    <p>Faça sua alteração de prazo</p>
     <button id="openModalButton">Alteração de Prazo</button>
     <div id="modal" class="modal">
       <div class="modal-content_cadastro">
@@ -276,20 +251,19 @@
           <input type="text" id="prazo">
           <label id="solicitado"><b>*Solicitado por</b></label>
           <hr>
-          <label><input id="op_Vendedor" type="radio" name="funcao" value="Vendedor">Vendedor</label>
           <label><input id="op_Supervisor" type="radio" name="funcao" value="Supervisor">Supervisor</label>
+          <label><input id="op_Vendedor" type="radio" name="funcao" value="Vendedor">Vendedor</label>
+          <br>
           <label><input id="op_Cliente" type="radio" name="funcao" value="Cliente">Cliente</label>
+          <label><input id="op_Vissol" type="radio" name="funcao" value="Vissol">Vissol</label>
           <hr>
           <label for="nome_solicitante">Nome do Solicitante</label>
           <input type="text" id="nome_solicitante" name="nome_solicitante">
           <label for="tel_solicitante">Telefone do Solicitante</label>
           <input type="text" id="tel_solicitante" placeholder="(00)0000-0000">
-
           <label for="observacao_prazo">Observação</label>
           <textarea id="observacao_prazo" placeholder="Digite sua observação" maxlength="50"></textarea>
-
           <input type="button" value="Enviar Solicitação" id="soli" class="btn">
-          
         </form>
       </div>
     </div>
@@ -297,12 +271,11 @@
   <div class="risca-1"></div>
 
   <div class="list-item-consulta_cnpj">
-
   <div class="container-consulta">
     <button id="btnCNPJ">Consulta Comercial</button>
     <button id="btnCliente">Consulta Código</button>
   </div>
-
+<!--CONSULTA COMERCIAL-->
   <div id="cnpjContent" class="container-consulta" style="display: none;">
     <h2>Consulta Comercial</h2> 
     <ion-icon id="close" size="large" name="close-outline"></ion-icon>
@@ -316,7 +289,7 @@
     <br>
     <button id="Selbtn">Visualizar</button>
   </div>
-
+<!--CONSULTA CÓDIGO-->
   <div id="clienteContent" class="container-consulta" style="display: none;">
     <h2>Consulta Código</h2>  
     <ion-icon id="close2" size="large" name="close-outline"></ion-icon>
@@ -356,7 +329,6 @@
   </button>
   </form>
 </div>
-<!-- <ion-icon id="toggleIcon" name="eye-off-outline" onclick="togglePassword()"></ion-icon> -->
 
 <section class="container-whats">
   <a href="https://wa.me/5512991489477?text=Desejo falar com o especialista SK VISSOL sobre cadastro." target="_blank">
@@ -366,8 +338,6 @@
     </div>
   </a>
 </section>
-
-<!-- <ion-icon name="mail-outline"></ion-icon><a href="mailto:devolucao@cbblogistica.com.br?subject=CNPJ: &body=ANEXAR: - NFe Devolução - Canhoto assinado - Boleto com o mesmo prazo emitido pela CBB.">devolucao@cbblogistica.com.br</a>  -->
 
 <section class="container03">
     <div class="container-text">

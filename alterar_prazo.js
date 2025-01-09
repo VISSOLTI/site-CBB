@@ -85,4 +85,5 @@ set(ref(db, "Solicitacao/" + "Cód Cliente: " + Cod_cliente.value +
   });
 }
 
+
 Insbtn.addEventListener('click', Solicitar);

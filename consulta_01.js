@@ -7,7 +7,6 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/fireba
 const firebaseConfig = {
   apiKey: "AIzaSyDwl0JvXHZMnLsic2zS2bu0Ne8jlqlRMZY",
   authDomain: "consulta-cbb.firebaseapp.com",
-  databaseURL: "https://consulta-cbb-default-rtdb.firebaseio.com",
   projectId: "consulta-cbb",
   storageBucket: "consulta-cbb.appspot.com",
   messagingSenderId: "564790071043",

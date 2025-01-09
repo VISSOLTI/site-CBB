@@ -9,7 +9,6 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/fireba
 const firebaseConfig02 = {
   apiKey: "AIzaSyAtDNSbsG8GmxzdiumyFXjM9XulkSyhbxs",
   authDomain: "consulta-cod-cli-cbb.firebaseapp.com",
-  databaseURL: "https://consulta-cod-cli-cbb-default-rtdb.firebaseio.com",
   projectId: "consulta-cod-cli-cbb",
   storageBucket: "consulta-cod-cli-cbb.appspot.com",
   messagingSenderId: "979476713391",

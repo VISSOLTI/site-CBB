@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favi_icons/icon-cbb.jpg" type="image/x-icon">
+    <title>CBB Distribuidora</title>
+    <link rel="stylesheet" href="css/uploud-css/style.css">
+    <link rel="stylesheet" href="css/uploud-css/mq-uploud.css">
+</head>
+<body>
+  <div class="container_00">
+    <h1 class="logo"><a href="../fale-conosco.html"><img class="logo-cbb" src="imagens/logo-cbb.png" alt=""></a></h1>
+    <div class="risca-1"></div>
+      <div class="container">
+              <h2>Solicitação enviada com sucesso, já estamos finalizando</h2>
+              <h2>Clique no botão para selecionar e enviar o documento específico</h2>
+              <!-- <h3>O setor de cadastro entrará em contato para solicitar documentos adicionais caso necessário.</h3> -->
+            <div class="document-list-container">
+              <div class="document-list">
+                <h1>Documentos PJ:</h1>
+                <ul>
+                  <li><button class="upload">CNH/RG do Sócio ADM</button></li>
+                  <li><button class="upload">Comprovante de Residência</button></li>
+                  <li><button class="upload">Foto da Fachada</button></li>
+                  <li><button class="upload">Ficha de Cadastro</button></li>
+                </ul>
+              </div>
+              <div class="document-list">
+                <h1>Documentos PF:</h1>
+                <ul>
+                  <li><button class="upload">CNH/RG</button></li>
+                  <li><button class="upload">Comprovante de Residência</button></li>
+                  <li><button class="upload">Foto da Fachada</button></li>
+                  <li><button class="upload">Ficha de Cadastro</button></li>
+                </ul>
+              </div>
+            </div>
+      <h3>OBS: após enviar aguarde completar a barra de progresso </h3>
+  </div>
+      <div class="upload-area">
+          <div class="progress-container">
+              <div class="progress"></div>
+          </div>
+          <div class="percent">0%</div>
+          <input type="file" class="hidden-upload-btn" style="display: none;">
+      </div>
+      <a href="fale-conosco.html"><button class="voltar" value="Encerrar">Encerrar</button></a>
+</div>
+    <!-- firebase sdk -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
+    <script src="JS-uploud/script.js"></script>
+</body>
+
+</html>

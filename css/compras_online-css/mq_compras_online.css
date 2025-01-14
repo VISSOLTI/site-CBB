@@ -1,8 +1,24 @@
-/* RESPONSIVE DESIGN */
-
-/*NOTEBOOK */
+@media(max-width: 1300px) {
 
 
+  .logo-cbb {
+    height: 15px;
+    width: 150px;
+  }
+  .nav-item {
+    margin: 3px;
+  }
+  .nav-link,
+  .nav-link-fale_conosco {
+    font-size: 15px;
+  }
+  .logo-big img {
+    height: 180px;
+  }
+  .frase h3 {
+    font-size: 20px;
+  }
+}
 /* I-FONE - CELULAR DEITADO */
 
 /* MEU - CELULAR DEITADO */

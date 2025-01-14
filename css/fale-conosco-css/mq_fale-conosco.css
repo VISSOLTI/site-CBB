@@ -1,8 +1,25 @@
 /* RESPONSIVE DESIGN */
 
-/*NOTEBOOK */
+@media(max-width: 1300px) {
+.logo-cbb {
+  height: 15px;
+  width: 150px;
+}
+.nav-item {
+  margin: 3px;
+}
+.nav-link,
+.nav-link-fale_conosco {
+  font-size: 15px;
+}
+.logo-big img {
+  height: 180px;
+}
+.frase h3 {
+  font-size: 20px;
+}
 
-
+}
 /* I-FONE - CELULAR DEITADO */
 
 /* MEU - CELULAR DEITADO */
@@ -65,7 +82,7 @@
   height: 350px;
   width: 100vw;
   margin-top: 0px;
-  background-image: url('img-fale-conosco.jpg');
+  background-image: url('container_fale_conosco.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -548,7 +565,7 @@
   align-items: center;
   flex-direction: column;
   background-size: cover;
-  background-image: url('img-mobile.jpg');
+  background-image: url('img-container.jpeg');
 }
 .container01 .container-text {
   color: #ffff;
@@ -577,7 +594,7 @@
 }
 
 /*---------------------*/
-.container-consulta{
+.container-consulta {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -648,8 +665,6 @@ h2 {
   font-size: 16px;
   background-color: #007bff;
 }
-
-
 .container {
   display: flex; 
   flex-direction: column; 
@@ -682,7 +697,7 @@ h2 {
 }
 #btn-ped,
 #openModalButton, 
-#openModalButton_cadastro {
+#openModalButton_Setor { /*  */
   padding: 10px 10px;
   border: none;
   font-size: 13px;

@@ -1,8 +1,23 @@
 /* RESPONSIVE DESIGN */
-
-
-/* I-FONE - CELULAR DEITADO */
-
+@media(max-width: 1300px) {
+  .logo-cbb {
+    height: 15px;
+    width: 150px;
+  }
+  .nav-item {
+    margin: 3px;
+  }
+  .nav-link,
+  .nav-link-fale_conosco {
+    font-size: 15px;
+  }
+  .logo-big img {
+    height: 180px;
+  }
+  .frase h3 {
+    font-size: 20px;
+  }
+}
 /* MEU - CELULAR DEITADO */
 @media(max-width: 1000px) {
 
@@ -493,26 +508,18 @@
   width: 600px;
 }
 
-.container1-mobile  {
-  height: 280px;
+.container1-mobile,
+.container2-mobile   {
+  height: 400px;
   width: 100vw;
   margin-top: 0px;
-  background-image: url('imagens/img-mobile01.jpg'); 
-  background-size: contain;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  background-size: cover;
 }
-.container2-mobile {
-  height: 276px;
-  width: 100vw;
-  margin-top: 0px;
-  background-image: url('imagens/img-container02.jpg');
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-size: contain;
-}
+
 .container1-mobile .text-mobile,
 .container2-mobile .text-mobile {
   color: #ffff;

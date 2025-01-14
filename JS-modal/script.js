@@ -3,7 +3,7 @@ const modal1 = document.getElementById('modal1_termo');
 const modal2 = document.getElementById('modal_cadastro');
 const btnAbrirModal1 = document.getElementById('abrirModal1');
 const btnAvancar1 = document.getElementById('avancar1');
-const btnsFechar = document.getElementsByClassName("close");
+const btnsFechar = document.getElementsByClassName("close-button_cadastro");
 
 // Função para abrir um modal
 function abrirModal(modal) {

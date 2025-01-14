@@ -145,7 +145,7 @@ header {
     background-position: right;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url('imagens/img-container01.jpg'); 
+    background-image: url('home-topo02.jpeg'); 
     display: flex;
     justify-content: left;
     align-items: center;
@@ -164,7 +164,7 @@ header {
     text-align: left;
     position: relative;
     isolation: isolate;
-    background-image: url('imagens/img-container02.jpg'); 
+    background-image: url('container_fale_conosco.jpeg'); 
 }
 
 .container1-mobile::after,

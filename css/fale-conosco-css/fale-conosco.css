@@ -123,7 +123,7 @@ header {
     background-position: right;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url('img-fale-conosco.jpg');
+    background-image: url('img-container.jpeg');
     display: flex;
     justify-content: left;
     align-items: center;
@@ -206,7 +206,7 @@ header {
   /* Button Styles */
   #btn-ped,
   #openModalButton, 
-  #openModalButton_cadastro {
+  #openModalButton_Setor { 
     padding: 10px 20px;
     font-size: 18px;
     border: 2px solid #24252a;

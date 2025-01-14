@@ -1,13 +1,19 @@
+@media(max-width: 1300px) {
 
+
+}
+
+@media(max-width: 1000px) {
+
+}
+
+
+@media (max-width: 730px) {
 
 .btn_cadastro {
-    padding: 10px 20px;
-    font-size: 18px;
-    border: 2px solid #24252a;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #007bff;
-    color: white;
+    height: 40px;
+    padding: 5px 10px;
+    font-size: 14px;     
 }
 
 /* Modal - .terms-box */ 
@@ -24,27 +30,31 @@
 
     height: 100%;
     width: 100%;
+
+     
 }
 /* .terms-text */
 .modal-content_termo {
-    margin: 0 auto; /* 15% from the top and centered */
-    width: 60%; /* Could be more or less, depending on design */ /**/
-    
-    padding: 50px;
-    height: 400px;
+    margin: 0px; /* 15% from the top and centered */
+    width: 70%; /* Could be more or less, depending on design */ /**/
+    padding: 30px;
+    height: 300px;
     overflow-y: auto;
     font-size: 14px;
     font-weight: 500;
     color: #f1f1f1;
     text-align: justify;
     background-color: #111; 
+
+    
 }
 .modal-content_termo p {
     color: #ECECEE;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .modal-content_termo h2 {
+    color: #ECECEE;
     text-align: center;
 }
 .modal-content_termo::-webkit-scrollbar{
@@ -75,14 +85,16 @@
     color: #fff;
     transform: .3s linear;
     cursor: pointer;
-  }
-  .modal-content_termo .red-btn{
+}
+.modal-content_termo .red-btn {
+    font-size: 16px;
     background-color: #d13639;
-  }
-  .modal-content_termo .gray-btn{
-   background-color: #282828; 
-  }
-  .modal-content_termo .btn:houver{
+}
+.modal-content_termo .gray-btn {
+    font-size: 16px;
+    background-color: #282828; 
+}
+.modal-content_termo .btn:houver{
     opacity: .6;
 }
   
@@ -144,30 +156,25 @@
 .modal-content,
 .modal-content_cadastro {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 22%; /* Could be more or less, depending on design */ /**/
+    width: 70%; /* Could be more or less, depending on design */ /**/
 }
-    
 #modalForm label,
-#modalForm_cadastro label,
-#modalForm_Setor label {
+#modalForm_cadastro label {
     color: #808080;
     font-size: 18px;
 }
 #modalForm input,
-#modalForm textarea,
-#modalForm_cadastro  input,
-#modalForm_cadastro textarea,
-#modalForm_Setor input,
-#modalForm_Setor textarea  {
+#modalForm textarea {
     margin: 5px;
 }
-
+#modalForm_cadastro  input,
+#modalForm_cadastro textarea {
+    margin: 5px;
+}
 #observacao,
-#observacao_prazo,
-#observacao_Setor {
+#observacao_prazo {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
     width: 95%; /* Ajuste a largura conforme necessário */
@@ -197,13 +204,7 @@
 #modalForm_cadastro input[type="number"],
 #modalForm_cadastro input[type="email"],
 #modalForm_cadastro input[type="date"],
-#modalForm_cadastro input[type="tel"],
-
-#modalForm_Setor input[type="text"],
-#modalForm_Setor input[type="number"],
-#modalForm_Setor input[type="email"],
-#modalForm_Setor input[type="date"],
-#modalForm_Setor input[type="tel"]{
+#modalForm_cadastro input[type="tel"] {
     width: 90%;
     padding: 10px;
     margin-bottom: 15px;
@@ -236,3 +237,6 @@ hr {
     cursor: pointer;
     font-size: 14px;
 }
+
+
+}    

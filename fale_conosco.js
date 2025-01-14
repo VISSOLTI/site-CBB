@@ -1,7 +1,10 @@
 
 const openModalButton = document.getElementById('openModalButton');
-const openModalButton_cadastro = document.getElementById('openModalButton_cadastro');
+const openModalButton_Setor = document.getElementById('openModalButton_Setor');
 const modal = document.getElementById('modal');
+const modal_Setor = document.getElementById('modal_Setor');
+
+const openModalButton_cadastro = document.getElementById('openModalButton_cadastro');
 const modal_cadastro = document.getElementById('modal_cadastro');
 const closeButton = document.querySelector('.close-button');
 const closeButton_cadastro = document.querySelector('.close-button_cadastro');
@@ -28,6 +31,12 @@ function formatarTelefone(telefone) {
 openModalButton.addEventListener('click', () => {
   modal.style.display = 'block';
 });
+openModalButton_Setor.addEventListener('click', () => {
+  modal_Setor.style.display = 'block';
+});
+
+
+
 // Open Modal
 openModalButton_cadastro.addEventListener('click', () => {
   modal_cadastro.style.display = 'block';

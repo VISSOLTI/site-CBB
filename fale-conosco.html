@@ -182,7 +182,7 @@
       <div class="modal-content_termo">
           <span class="close-button_cadastro">&times;</span>
           <h2>Termos de serviço</h2>
-          <p>Last Edit: 04/13/2022</p>
+         
           <p> Clientes</p>
           <p>CLÁUSULA PRIMEIRA: Por meio deste formulário, o Requisitante/Comprador manifesta seu desejo na abertura de cadastro junto a CBB DISTRIBUIDORA LTDA, para aquisição de produtos à vista ou a prazo. Da compra: as negociações serão executadas de forma presencial ou eletrônica; Da entrega: os produtos serão entregues única e exclusivamente no endereço cadastrado, via exceção redes com CD distribuição anexado a este cadastrado. Do recebimento: fica a obrigação do comprador a conferência dos produtos e valores negociados no ato do recebimento e assinatura dos canhotos da nota fiscal e boleto, informando o nº do documento (RG ou CPF) e data, em caso de não conformidade com o pedido acordado, recusar o recebimento. Da devolução: somente autorizada a devolução de produtos acompanhada de nota fiscal com apontamento origem fiscal da compra. Não serão aceitas tratativas posteriores. Parágrafo primeiro: O inadimplemento de quaisquer boletos acarretará a multa de 8% (oito por cento) sobre o valor da nota fiscal, além de juros moratório de 1% (um por cento) ao mês pro rata die e correção monetária pelo IGPM. Parágrafo segundo: O inadimplemento de quaisquer boletos acarretará o bloqueio das vendas a prazo, podendo a partir do sétimo dia ser incluído o nome em órgãos de proteção ao crédito, além das medidas judiciais cabíveis, até que o apresentante regularize os pagamentos</p>
           <p>CLÁUSULA SEGUNDA: A análise de crédito e abertura de cadastro para compra a prazo está sujeita à aprovação da CBB DISTRIBUIDORA LTDA, a qual é facultada recusar por qualquer motivo.</p>
@@ -261,7 +261,7 @@
         <h2>Alteração de Prazo para pagamento</h2>
         <form id="modalForm">
           <label for="cod_cliente">Código do Cliente</label>
-          <input type="text" id="cod_cliente" name="cod_cliente">
+          <input type="text" id="cod_cliente" name="cod_cliente"  oninput="formatarInput(this)">
           <label for="razao_social">Razão Social</label>
           <input type="text" id="razao_social_2" name="razao_social">
           <label for="name_sup">Nome do Supervisor</label>
@@ -295,7 +295,6 @@
 
   
 <!--ALTERAÇÃO DE SETOR !!! -->
-
 <div class="list-item">
   <p>Faça sua alteração de Setor</p>
   <button id="openModalButton_Setor">Alteração de Setor</button>
@@ -338,7 +337,7 @@
         <input type="text" id="tel_solicitante_Setor" placeholder="(00)0000-0000">
         <label for="observacao_prazo">Observação</label>
         <textarea id="observacao_Setor" placeholder="Digite sua observação" maxlength="50"></textarea>
-        <input type="button" value="Enviar Solicitação" id="soli_setor" class="btn">
+        <input type="button" value="Enviar" id="soli_setor" class="btn">
       </form>
     </div>
   </div>
@@ -408,10 +407,10 @@
 </div>
 
 <section class="container-whats">
-  <a href="https://wa.me/5512991489477?text=Desejo falar com o especialista SK VISSOL sobre cadastro." target="_blank">
+  <a href="https://wa.me/5512991682761?text=Desejo falar com o especialista SK VISSOL sobre cadastro." target="_blank">
       <div class="whats-app">
       <img src="imagens/whats.png" width="250" alt="Fale Conosco pelo WhatsApp" title="Fale conosco pelo WhatsApp">
-      <span>Fale conosco pelo WhatsApp</span>
+      <span>Fale com o Cadastro pelo Whatsapp</span>
     </div>
   </a>
 </section>
@@ -675,9 +674,7 @@
     <img src="imagens/whats.png" width="50" alt="Fale Conosco pelo WhatsApp" title="Fale conosco pelo WhatsApp">
     </a>
 </div>
-<script type="module" src="alterar_prazo.js"></script>
-<script type="module" src="alterar_Setor.js"></script>
-<script type="module" src="cadastro.js"></script>
+
 <script src="fale_conosco.js"></script>
 <script src="script.js"></script>
 <script type="module" src="consulta_01.js"></script>
@@ -695,6 +692,10 @@
 <script src="JS-login/logout.js"></script>
 <script src="JS-login/validation.js"></script>
 <script src="JS-login/register.js"></script>
+
+<script type="module" src="alterar_prazo.js"></script>
+<script type="module" src="alterar_Setor.js"></script>
+<script type="module" src="cadastro.js"></script>
 
 <script src="JS-modal/script.js"></script>
 </body>

@@ -216,7 +216,7 @@ header {
     color: white;
   }
  
-  /* Modal Styles */
+  /* Modal Styles  class*/
 .modal,
 .modal_cadastro {
     display: none; /* Initially hidden */

@@ -65,7 +65,7 @@ function formatarTelefone(telefone) {
   return telefone;
 }
 
-function Solicitar(){
+function alterar_Setor(){
     const dataHora = new Date();
     const horaFormatada = dataHora.toLocaleString();
 
@@ -101,4 +101,4 @@ set(ref(db, "Solicitacao/" + "Cód Cliente: " + Cod_cliente_setor.value +
 }
 
 
-Insbtn_Setor.addEventListener('click', Solicitar);
+Insbtn_Setor.addEventListener('click', alterar_Setor);

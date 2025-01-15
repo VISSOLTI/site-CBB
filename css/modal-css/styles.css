@@ -75,17 +75,17 @@
     color: #fff;
     transform: .3s linear;
     cursor: pointer;
-  }
-  .modal-content_termo .red-btn{
+}
+.modal-content_termo .red-btn{
     background-color: #d13639;
-  }
-  .modal-content_termo .gray-btn{
+}
+.modal-content_termo .gray-btn{
    background-color: #282828; 
-  }
-  .modal-content_termo .btn:houver{
+}
+.modal-content_termo .btn:houver{
     opacity: .6;
 }
-  
+
 /* Fechar botão */
 .modal-content_termo .close {
     color: #aaa;
@@ -93,7 +93,6 @@
     font-size: 28px;
     font-weight: bold;
 }
-
 .modal-content_termo .close:hover,
 .modal-content_termo .close:focus {
     color: black;
@@ -102,7 +101,6 @@
 }
 
 /* Títulos e texto */
-
 /* Botões */
 .modal-content_termo button {
     background-color: #4CAF50; /* Verde */

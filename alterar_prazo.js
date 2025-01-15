@@ -1,5 +1,5 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.3/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -18,7 +18,7 @@ const app = initializeApp(firebaseConfig);
 
 
 import {getDatabase, ref, get, set, child, update, remove}
-from "https://www.gstatic.com/firebasejs/10.1.3/firebase-database.js"
+from "https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js"
 
 const db = getDatabase();
 
@@ -34,23 +34,7 @@ var Insbtn = document.getElementById("soli");
 var Tel_solicitante = document.getElementById("tel_solicitante")
 var Obervacao_Prazo = document.getElementById("observacao_prazo")
 
-function formatarCodigo(input) {
-  // Remove todos os caracteres que não sejam números
-  let valor = input.value.replace(/\D/g, '');
 
-  // Insere um hífen após os quatro primeiros dígitos
-  valor = valor.replace(/(\d{4})(\d)/, '$1-$2');
-
-  // Limita o número de dígitos para 8
-  valor = valor.slice(0, 9);
-
-  // Atualiza o valor do campo
-  input.value = valor;
-}
-// Adiciona um ouvinte de evento "input" ao elemento
-Cod_cliente.addEventListener("input", function() {
-  formatarCodigo(Cod_cliente);
-});
 
 function Solicitar(){
     const dataHora = new Date();

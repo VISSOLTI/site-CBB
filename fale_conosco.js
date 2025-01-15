@@ -27,6 +27,22 @@ function formatarTelefone(telefone) {
 }
 
 
+function formatarInput(input) {
+  // Remove todos os caracteres que não sejam números
+  let valor = input.value.replace(/\D/g, '');
+
+  // Formata o valor com o hífen após os 4 primeiros dígitos
+  valor = valor.replace(/(\d{4})(\d)/, '$1-$2');
+
+  // Limita o número máximo de dígitos para 9
+  valor = valor.slice(0, 9);
+
+  // Atualiza o valor do input
+  input.value = valor;
+}
+
+
+
 // Open Modal
 openModalButton.addEventListener('click', () => {
   modal.style.display = 'block';

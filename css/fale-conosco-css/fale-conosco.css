@@ -614,7 +614,9 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100vw;
 }
+
 .container-whats a {
     text-decoration: none;
 }

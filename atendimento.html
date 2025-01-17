@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/fale-conosco-css/mq_fale-conosco.css">
     <link rel="stylesheet" href="css/global-carousel/style.css">
     <link rel="stylesheet" href="css/global-carousel/mq-style.css">
+    <link rel="stylesheet" href="CSS-LOGIN/login_page_css.css">
     
 
     <link rel="stylesheet" href="css/modal-css/styles.css">
@@ -27,7 +28,7 @@
                   <li class="nav-item"><a href="catalogo.html" class="nav-link"><span>Catálogo</span></a></li>
                   <li class="nav-item"><a href="regioes.html" class="nav-link"><span>Regiões Atendidas</span></a></li>
                   <li class="nav-item"><a href="fornecedores.html" class="nav-link"><span>Fornecedores</span></a></li>
-                  <li class="nav-item"><a href="compras_online.html" class="nav-link"><span>Compras Online</span></a></li>
+                  <li class="nav-item"><a href="atendimento.html" class="nav-link"><span>Atendimento</span></a></li>
                   <li class="nav-item"><a href="nfd.html" class="nav-link"><span class="nfd">NFD</span></a></li>
                   <li class="nav-item-fale"><a href="fale-conosco.html" class="nav-link-fale_conosco"><span class="fale_conosco">Fale Conosco</span></a></li>
               </ul>        
@@ -35,12 +36,9 @@
   </header>
   <section class="container00">
       <div class="container-imagem">
-       <img class="img-topo-01" src="css/fale-conosco-css/01fale-conosco-topo.jpg" alt=""> 
+       <img class="img-topo-01" src="css/fale-conosco-css/img-topo.jpeg" alt=""> 
       </div>
   </section>
-
-  
-  
   <div class="logo-big">
     <img src="favi_icons/icon-cbb.jpg" alt="">
   </div>
@@ -158,8 +156,16 @@
   </section>
   <section class="container01">
     <div class="container-text">
-        <h2>Compras Online</h2>
-        <p>Acesse aqui para fazer seu pedido. </p>
+        <h2>Atendimento ao Cliente</h2>
+        <p>Entre em contato conosco para mais informações ou para realizar qualquer uma dessas solicitações.</p>
+        <ul>
+          <li>Ped +</li>
+          <li>Cadastro</li>
+          <li>Alteração de Prazo</li>
+          <li>Alteração de Setor</li>
+        </ul>
+        
+        
     </div>
   <!--
     <div class="ped-peq">
@@ -182,7 +188,7 @@
  <!--CADASTRO-->   
   <div class="risca-1"></div>
   <div class="list-item-cadastro">
-    <p>Faça seu cadastro</p>
+    <p>Crie seu cadastro conosco de forma rápida e fácil.</p>
     <button id="abrirModal1" class="btn_cadastro">Cadastro</button>
      <!--modal Termo de Responsabilidade -->  
     <div id="modal1_termo" class="modal_termo">
@@ -351,11 +357,72 @@
 </div> 
 <div class="risca-1"></div>
 
+<!--CONSULTA COMERCIAL/COD-CLiente-->
+  <div class="list-item-consulta_cnpj">
+  <div class="container-consulta">
+    <button id="btnCNPJ">Consulta Comercial</button>
+    <button id="btnCliente">Consulta Código</button>
+  </div>
+<!--CONSULTA COMERCIAL-->
+  <div id="cnpjContent" class="container-consulta" style="display: none;">
+    <h2>Consulta Comercial</h2> 
+    <ion-icon id="close" size="large" name="close-outline"></ion-icon>
+    <div class="search">
+      <input type="text" id="consulta-cnpj_cpf" placeholder="Digite seu cnpj ou cpf" maxlength="18">
+    </div>
+    <p id="cod" style="display: none; pointer-events: none;"></p>
+    <p id="ficha" style="display: none; pointer-events: none;"></p>
+    <p id="v1" style="display: none; pointer-events: none;"></p>
+    <p id="v2" style="display: none; pointer-events: none;"></p>
+    <br>
+    <button id="Selbtn">Visualizar</button>
+  </div>
+<!--CONSULTA CÓDIGO-->
+  <div id="clienteContent" class="container-consulta" style="display: none;">
+    <h2>Consulta Código</h2>  
+    <ion-icon id="close2" size="large" name="close-outline"></ion-icon>
+    <div class="search">
+      <input type="text" id="consulta-cod_cli" placeholder="Digite seu código">
+    </div>
+    <p id="ficha_cli" style="display: none; pointer-events: none;"></p>
+    <p id="v1_cli" style="display: none; pointer-events: none;"></p>
+    <p id="v2_cli" style="display: none; pointer-events: none;"></p>
+    <br>
+    <button id="btnCli">Visualizar</button>
+  </div>
+  </div>
+  <div class="risca-1"></div>
+</div>
+
+<!--LOGIN-->
+<div class="centralize">
+  <form class="login">
+    <h1>LOGIN - COMERCIAL</h1>
+    <div class="form-field">
+        <label for="email">E-mail:
+        <input type="email" name="email" placeholder="digite seu email"
+        onchange="onChangeEmail()" id="email" />
+       </label>
+        <div class="error" id="email-required-error">Email é obrigatório</div>
+        <div class="error" id="email-invalid-error">Email é inválido</div>
+    </div>
+    <div class="form-field">
+        <label for="password">Senha:</label>
+        <input type="password" name="password" onchange="onChangePassword()" placeholder="senha" id="password"/>
+        <img id="fechado" src="imagens/fechado.png" onclick="togglePassword()" alt="fechado">
+      
+    </div>
+    <button type="button" class="solid" id="login-button"  onclick="login()">
+      Entrar
+  </button>
+  </form>
+</div>
+
 <section class="container-whats">
   <a href="https://wa.me/551291489477?text=Olá, quero falar com o atendimento da CBB Distribuidora!" target="_blank">
       <div class="whats-app">
       <img src="imagens/whats.png" width="250" alt="Fale Conosco pelo WhatsApp" title="Fale conosco pelo WhatsApp">
-      <span>Fale conosco pelo WhatsApp</span>
+      <span>Fale com o Cadastro pelo Whatsapp</span>
     </div>
   </a>
 </section>
@@ -533,10 +600,24 @@
 <script src="script.js"></script>
 <script src="fale_conosco.js"></script>
 
+<script type="module" src="JS-atendimento/prazo.js"></script>
+<script type="module" src="JS-atendimento/cadastro.js"></script>
+<script type="module" src="JS-atendimento/setor.js"></script>
 
-<script type="module" src="prazo.js"></script>
-<script type="module" src="cadastro.js"></script>
-<script type="module" src="setor.js"></script>
+<script type="module" src="consulta_01.js"></script>
+<script type="module" src="consulta_02.js"></script>
+<script src="consulta.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="JS-login/auth-guard.js"></script>
+<script src="JS-login/loading.js"></script>
+<script src="JS-login/login_firebase.js"></script>
+<script src="JS-login/login_page_script.js"></script>
+<script src="JS-login/logout.js"></script>
+<script src="JS-login/validation.js"></script>
+<script src="JS-login/register.js"></script>
+
 <script src="JS-modal/script.js"></script>
 </body>
 </html>

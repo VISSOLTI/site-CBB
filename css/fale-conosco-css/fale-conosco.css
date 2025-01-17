@@ -153,6 +153,14 @@ header {
 .container01 .container-text p {
     line-height: 30px;
     font-size: 24.5px;
+    margin: 5px;
+    padding: 5px;
+}
+.container01 .container-text li {
+    font-size: 24.5px;
+    list-style: none;
+    color: #F09102;
+    margin: 10px;
 }
 .container01 .risca-1 {
     display: none;
@@ -524,50 +532,16 @@ hr {
     color: #f09102;
     text-decoration: none;
 }
-.text .canais-ped {
-    color: #f09102;
-}
-.text .canais-cadastro {
-    color: #24252a;
-}
-.container-canal {
-    display: flex;
-    width: 500px;
-    flex-direction: column;
-}
-.container-atendimento {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-    border-radius: 10px;
-}
-.container-atendimento h3 {
-    color: #808080;
-    margin: 5px;
-    font-size: 23px;
-} 
+
+
+
 .title {
     color: #464646;
     background-color: #ECECEE;
     text-align: center;
 }
-.ped {
-    background-color: #FF9700;
-    border-radius: 150px;
-    height: 90px;
-    width: 90px;
-    box-shadow: 1px 1px 1px 1px #24252a;
-}
-.ped img,
-.cadastro img {
-    height: 90px;
-    width: 90px;
-    margin: 0px;
-    padding: 0px;
-    border-radius: 150px;
-}
+
+
 .container03-mobile {
     display: none;
 }
@@ -606,6 +580,27 @@ hr {
     text-align: center;
     flex-direction: row;
     width: 500px;
+}
+
+.container-atendimento {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+.container-atendimento p {
+    font-size: 24px;
+    color: #f09102;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.container-atendimento button {
+    color: #ECECEE;
+    background-color: #007bff;
+    font-size: 20px;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
 }
 
 .container-whats {

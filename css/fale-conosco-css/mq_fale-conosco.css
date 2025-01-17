@@ -592,7 +592,12 @@
   font-size: 17px;
   width: 300px;
 }
-
+.container01 .container-text li {
+  font-size: 18px;
+  list-style: none;
+  color: #F09102;
+  margin: 10px;
+}
 /*---------------------*/
 .container-consulta {
   display: flex;
@@ -846,35 +851,17 @@ h3 {
   color: #f09102;
 }
 .container-atendimento {
+  height: 150px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
-}
-.container-canal {
-  height: 0px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row;
   width: 100vw;
 }
-.ped,
-.cadastro {
-  margin-bottom: 150px;
+.container-atendimento p,
+.container-atendimento button {
+  font-size: 17px;
 }
-.ped {
-  background-color: #FF9700;
-  height: 60px;
-  width: 60px;
-}
-.ped img,
-.cadastro img {
-  height: 60px;
-  width: 60px;
-  padding: 0px;
-}
+
 .container03 {
   display: none;
 }

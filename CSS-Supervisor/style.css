@@ -1,0 +1,110 @@
+body {
+    background-color: #1d1d20;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container-00  {
+  text-align: center;
+} 
+.container-00 h1 {
+  color: #f09102;
+}
+.container-00 button  {
+  font-size: 18px;
+  color: white;
+  background-color: rgb(219, 86, 86);
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 10px;
+} 
+ 
+h1 .risca-1 {
+  width: 400px;
+}
+h1 {
+  text-align: center;
+}
+.logo a{
+  text-decoration: none;
+  color: #24252a;
+}
+.logo-cbb {
+  height: 20px;
+  width: 250px;
+  margin: 10px;
+}
+.risca-1 {
+  border: 1px solid #4BC9F3;
+  border-radius: 50px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+
+#filtros-container {
+    display: grid; /* Layout em grid para alinhar os filtros */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajuste a largura mínima conforme necessário */
+    gap: 10px; /* Espaçamento entre os filtros */
+    background-color: #24252a; /* Opcional: adiciona cor de fundo ao cabeçalho */
+    margin: 15px;
+  }
+.filtro {
+    display: flex;
+    flex-direction: column; /* Filtros em coluna: label em cima, select embaixo */
+    color: #f09102;
+  }
+.filtro label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 18px;
+    
+  }
+.filtro select {
+    width: 70%;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+  }
+#filtrar-container { /* Novo container para o botão */
+    grid-column: 1 / -1; /* Ocupa todas as colunas da grade */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    margin-top: 10px; /* Espaçamento acima do botão */
+    border: 1px solid #f09102;
+  }
+#filtrar {
+    padding: 0px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    height: 30px;
+    width: 70px;
+    border-radius: 5px;
+    margin: 20px;
+  }
+
+/* Estilos para a tabela */
+#dados-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+  
+#dados-container table {
+    width: 100%; /* Opcional: define a largura da tabela */
+    background-color: #24252a; /* Opcional: adiciona cor de fundo ao cabeçalho */
+}
+
+#dados-container th,
+#dados-container td {
+  font-size: 15px;
+    padding: 8px; /* Opcional: adiciona padding às células */
+    text-align: center; /* Opcional: alinha o texto à esquerda */
+    color: #ccc;
+    font-weight: bold;
+}
+  

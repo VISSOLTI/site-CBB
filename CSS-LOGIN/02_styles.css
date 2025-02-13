@@ -74,7 +74,8 @@ body {
 .form-group-container-2 span #texto8,
 .form-group-container-2 span #texto12,
 .form-group-container-2 span #texto11,
-.form-group-container-2 span #texto9 {
+.form-group-container-2 span #texto9,
+.form-group-container-2 span #texto10 {
     margin: 15px;
 }
 .form-group-container-1 .grupo,
@@ -191,7 +192,6 @@ p {
 }
 
 /* 2° LINHA  */
-
 
 #texto45,
 #texto13,

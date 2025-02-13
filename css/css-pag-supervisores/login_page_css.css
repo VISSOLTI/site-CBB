@@ -1,0 +1,91 @@
+.centralize {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.form-field {
+  margin-bottom: 10px;
+}
+.login {
+  background-color: #ECECEE;
+  border: 1px solid black;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.login h1 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  font-size: 25px;
+  color: #f09102;
+  margin: 15px;
+}
+label {
+  font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #f09102;
+}
+label input {
+  margin: 5px;
+}
+
+
+.clear {
+  background: transparent;
+  border: none;
+  color: white;
+}
+.centralize button {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.login .solid {
+  width: 25vh;
+  height: 40px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background: white;
+  border: 1px solid rgb(8, 68, 128);
+  color: #FFFFFF;
+  font-size: 20px;
+  padding: 7px;
+  background-color: #4CAF50;
+  cursor: pointer;
+}
+.outline {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+}
+.error {
+  color: white;
+  background: red;
+  display: none;
+} 
+button:active {
+  opacity: 0.8;
+}
+
+button[disabled] {
+  opacity: 0.7;
+}
+
+.add.fixed {
+  position: fixed;
+}
+.loading {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+.loading label {
+  font-size: 24px
+}
+.centralize .login .form-field input {
+  padding: 10px;
+  width: -webkit-fill-available;
+}
+

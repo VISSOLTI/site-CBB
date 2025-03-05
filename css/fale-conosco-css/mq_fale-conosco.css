@@ -765,7 +765,6 @@ h2 {
   border-radius: 5px;
 }
 
-
   /* MODAL APÓS CADASTRO */
   .modal-content {
     background-color: #394147;
@@ -816,10 +815,6 @@ h3 {
   scale: 1.1;
   transition: 1s;
 } 
-
-
-
-
 /*---------------------*/
 .text h3 {
   font-size: 24px;
@@ -921,10 +916,10 @@ h3 {
 
 .container-whats {
   height: 150px;
-  
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #e4e2e2;
 }
 .container-whats a {
   text-decoration: none;

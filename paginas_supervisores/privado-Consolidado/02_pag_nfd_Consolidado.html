@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=p, initial-scale=1.0">
+  <link rel="shortcut icon" href="../../favi_icons/icon-cbb.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="../../CSS-Supervisor/style.css">
+  <link rel="stylesheet" href="../../CSS-Supervisor/MQ-style.css">
+  <title>Consulta NFD</title>
+</head>
+<body>
+  <h1 class="logo"><a href="index.html"><img class="logo-cbb" src="/CSS-Supervisor/logo-cbb.png" alt=""></a>
+    <div class="risca-1"></div>
+  </h1>
+  <div class="container-00">  
+    <h1>Consulta NFD</h1>
+    <a href="00_pag.html"><button>Voltar</button></a>
+  </div>
+
+  <select id="campo-busca-select">
+    <option>Opções</option>
+    <option value="Super">Supervisor</option>
+    <option value="Vend">Vendedor</option>
+    <option value="Cód_Cliente">Cód Cliente</option>
+    <option value="Descr_Cliente">Descr Cliente</option>
+    <option value="Cidade">Cidade</option>
+    <option value="Grupo_Análise">Grupo Análise</option>
+    <option value="NFD">NFD</option>
+    <option value="Ficha_Cadastro">Ficha Cadastro</option>
+    <option value="Data_Emissão">Data Emissão</option>
+    <option value="Valor">Valor</option>
+    <option value="Mês">Mês</option>
+    <option value="Ano">Ano</option>
+    <option value="Status_Aut">Status Aut</option>
+    <option value="OBS 1">OBS 1</option>
+  </select>
+  <input type="text" id="termo-busca" placeholder="Digite o valor">
+  <button id="buscar-dados">Buscar Dados</button>
+  <hr>
+  <div id="dados-container"></div>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-database-compat.js"></script>
+  <script src="../../JS-supervisores/JS-consolidado/02_NFD_Consolidado.js"></script>
+</body>
+</html>

@@ -8,193 +8,148 @@ const firebaseConfig = {
   appId: "1:685087723176:web:c12ea79f8b944efea77c9d"
   };
   
-  // Inicialização do Firebase
-  firebase.initializeApp(firebaseConfig);
-  const db = firebase.database();
-  
-  // Função para exibir o loading
+ // Inicialização do Firebase
+firebase.initializeApp(firebaseConfig);
+const db = firebase.database();
+
+// Função para exibir o loading
 function exibirLoading() {
-  const loading = document.createElement('div');
-  loading.id = 'loading';
-  loading.style.cssText = `
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  `;
-  
-  loading.innerHTML = '<img src="../../CSS-Supervisor/loading.gif" alt="Loading...">'; // Adiciona o GIF
-  document.body.appendChild(loading);
+    const loading = document.createElement('div');
+    loading.id = 'loading';
+    loading.style.cssText = `
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    `;
+
+    loading.innerHTML = '<img src="../../CSS-Supervisor/loading.gif" alt="Loading...">'; // Adiciona o GIF
+    document.body.appendChild(loading);
 }
 
 // Função para remover o loading
 function removerLoading() {
-  const loading = document.getElementById('loading');
-  if (loading) {
-    loading.remove();
-  }
+    const loading = document.getElementById('loading');
+    if (loading) {
+        loading.remove();
+    }
 }
 
 
-  
+// Obtém o elemento select
+const campoBuscaSelect = document.getElementById('campo-busca-select');
+//const campoBuscaInput = document.getElementById('campo-busca');
+
+// Adiciona um ouvinte de evento 'change' ao select
+campoBuscaSelect.addEventListener('change', () => {
+    // Define o valor do input com a opção selecionada
+    campoBuscaInput.value = campoBuscaSelect.value;
+});
+
 function buscarDadosFirebase() {
     const dadosContainer = document.getElementById('dados-container');
     dadosContainer.innerHTML = '';
 
-    // Exibe o loading antes de buscar os dados
+    const campoBusca = campoBuscaSelect.value.trim().toLowerCase(); // Obtém o valor do select
+    const termoBusca = document.getElementById('termo-busca').value.trim().toLowerCase();
+
+    if (campoBusca === "" || termoBusca === "") {
+        dadosContainer.textContent = "Escolha uma  opção e preencha o valor.";
+        dadosContainer.style.color = '#f09102';
+        return;
+    }
+
     exibirLoading();
-    
-  
-    const dadosRef = db.ref('400');
-  
+    const dadosRef = db.ref();
+
     dadosRef.once('value', (snapshot) => {
-      // Remove o loading após receber os dados (com sucesso ou erro)
-      removerLoading();
+        removerLoading();
+        const dados = snapshot.val();
 
-      const dados = snapshot.val();
-      if (dados) {
-        const dadosAgrupados = {};
-  
-        for (const key in dados) {
-          const item = dados[key];
-          if (typeof item === 'object' && item !== null) {
-            for (const letra in item) {
-              if (!dadosAgrupados[letra]) {
-                dadosAgrupados[letra] = {};
-              }
-              dadosAgrupados[letra][key] = item[letra];
+        if (dados) {
+            const dadosFiltrados = Object.entries(dados)
+                .filter(([key, item]) => {
+                    // Verifica se o item é um objeto antes de acessar suas propriedades
+                    if (typeof item === 'object' && item !== null) {
+                        for (const campo in item) {
+                            if (item.hasOwnProperty(campo) && campo.toLowerCase() === campoBusca) {
+                                if (String(item[campo]).toLowerCase().includes(termoBusca)) {
+                                    return true;
+                                }
+                            }
+                        }
+                    }
+                    return false;
+                })
+                .map(([key, item]) => ({ ...item, id: key }));
+
+            if (dadosFiltrados.length === 0) {
+                dadosContainer.textContent = "Nenhum resultado encontrado.";
+                dadosContainer.style.color = '#f09102';
+                return;
             }
-          }
-        }
-  
-        // Cria os filtros (dropdowns)
-        const filtrosContainer = document.getElementById('filtros-container');
-        filtrosContainer.style.border = "2px solid #f09102"; // Adiciona borda ao container
-        filtrosContainer.style.borderRadius = "5px"
-        filtrosContainer.style.padding = "10px 20px"
 
-        const letras = Object.keys(dadosAgrupados).sort(); // Ordena as letras
-  
-        // Função para criar os dropdowns de filtro
-        function criarFiltros(letra) {
-          const filtroDiv = document.createElement('div');
-          filtroDiv.classList.add('filtro');
-          const label = document.createElement('label');
-          label.textContent = `${letra}:`;
-          const select = document.createElement('select');
-          select.id = `filtro-${letra}`;
-          const opcaoPadrao = document.createElement('option');
-          opcaoPadrao.value = '';
-          opcaoPadrao.textContent = 'opções';
-          select.appendChild(opcaoPadrao);
-  
-          const valoresLetra = [...new Set(Object.values(dadosAgrupados[letra]))]; // Valores únicos
+            // Cria a tabela
+            const table = document.createElement('table');
+            table.style.width = '100%';
+            table.style.borderCollapse = 'collapse';
 
-          // Ordena os valores
-          valoresLetra.sort((a, b) => {
-            const aNum = Number(a);
-            const bNum = Number(b);
+            // Cria o cabeçalho da tabela
+            const headerRow = table.insertRow();
+            const colunas = dadosFiltrados.length > 0 ? Object.keys(dadosFiltrados[0]).filter(coluna => coluna !== 'id') : []; // Verifica se dadosFiltrados não está vazio
 
-            if (!isNaN(aNum) && !isNaN(bNum)) {
-              // Se ambos forem números, ordena numericamente
-              return aNum - bNum;
-            } else {
-              // Se não forem números, ordena alfabeticamente
-              return a.localeCompare(b);
-            }
-          });
+            // Define a ordem desejada das colunas
+            const ordemColunas = [
+                "Super", "Vend", "Pedidos", "Cód_Cliente", "Descr_Cliente", "CNPJ_CPF", "Cidade", "Grupo_Análise", "NF", "Faturamento", "Placa", "Cond_PGTO", "Dias_Prazo", "Produtos", "Origem_Pedido" ];
 
-          for (const valor of valoresLetra) {
-            const opcao = document.createElement('option');
-            opcao.value = valor;
-            opcao.textContent = valor;
-            select.appendChild(opcao);
-          }
-  
-          filtroDiv.appendChild(label);
-          filtroDiv.appendChild(select);
-          return filtroDiv;
-        }
-  
-        // Adiciona os filtros ao container
-        letras.forEach(letra => {
-          const filtro = criarFiltros(letra);
-          filtrosContainer.appendChild(filtro);
-        });
-  
-        // Botão "Filtrar"
-        const botaoFiltrar = document.createElement('button');
-        botaoFiltrar.id = 'filtrar';
-        botaoFiltrar.textContent = 'Filtrar';
-        botaoFiltrar.addEventListener('click', () => {
-           // Limpa os dados exibidos
-          dadosContainer.innerHTML = '';
-
-          const filtrosSelecionados = {};
-          letras.forEach(letra => {
-            const filtro = document.getElementById(`filtro-${letra}`);
-            filtrosSelecionados[letra] = filtro.value;
-          });
-  
-          // Filtra os dados com base nos filtros selecionados
-          const dadosFiltrados = Object.entries(dados)
-            .filter(([key, item]) => {
-              let exibir = true;
-              for (const letra in filtrosSelecionados) {
-                if (filtrosSelecionados[letra] !== '' && item[letra] !== filtrosSelecionados[letra]) {
-                  exibir = false;
-                  break;
+            // Itera sobre a ordem desejada
+            ordemColunas.forEach(coluna => {
+                // Verifica se a coluna existe nos dados filtrados
+                if (colunas.includes(coluna)) {
+                    const headerCell = document.createElement('th');
+                    headerCell.textContent = coluna;
+                    headerCell.style.color = '#f09102';
+                    headerCell.style.border = '1px solid #f09102';
+                    headerCell.style.padding = '1.5px';
+                    headerRow.appendChild(headerCell);
                 }
-              }
-              return exibir;
-            })
-            .map(([key, item]) => ({ ...item, id: key })); // Adiciona o ID do item
-  
-         // Exibe os dados filtrados em formato de tabela
-         dadosContainer.innerHTML = '';
-         const table = document.createElement('table');
-         table.style.width = '100%'; // Opcional: define a largura da tabela
-         table.style.borderCollapse = 'collapse'; // Opcional: remove espaçamento entre as células
+            });
 
+            // Adiciona os dados à tabela
+            dadosFiltrados.forEach(item => {
+                const row = table.insertRow();
+                // Itera sobre a ordem desejada novamente para garantir a ordem correta dos dados
+                ordemColunas.forEach(coluna => {
+                    if (colunas.includes(coluna)) {
+                        const cell = row.insertCell();
+                        cell.textContent = item[coluna] || '-'; // Exibe '-' se o campo for vazio
+                        cell.style.border = '1px solid #f09102';
+                        cell.style.padding = '1.5px';
+                    }
+                });
+            });
 
-          // **Limpa os filtros após a filtragem**
-        letras.forEach(letra => {
-          const filtro = document.getElementById(`filtro-${letra}`);
-          filtro.value = ''; // Define a opção padrão como selecionada
-      });
+            // Adiciona a tabela ao contêiner
+            dadosContainer.appendChild(table);
 
-         // Cria o cabeçalho da tabela
-         const headerRow = table.insertRow();
-         const colunas = Object.keys(dadosAgrupados); // Obtém as colunas dos dados
-         colunas.forEach(coluna => {
-           const headerCell = document.createElement('th'); // Cria células de cabeçalho <th>
-           headerCell.textContent = coluna;
-           headerCell.style.color = ' #f09102'; // Altere 'red' para a cor desejada
-           headerCell.style.border = '1px solid #f09102'; // Opcional: adiciona borda às células
-           headerCell.style.padding = '6px'; // Opcional: adiciona padding às células
-           headerRow.appendChild(headerCell);
-         });
-
-         dadosFiltrados.forEach(item => {
-           const row = table.insertRow();
-           colunas.forEach(coluna => {
-             const cell = row.insertCell();
-             cell.textContent = item[coluna] || '-'; // Exibe o valor ou "-" se não existir
-             cell.style.border = '1px solid #f09102'; // Opcional: adiciona borda às células
-             cell.style.padding = '6px'; // Opcional: adiciona padding às células
-           });
-         });
-
-         dadosContainer.appendChild(table);
-       });
-
-     filtrosContainer.appendChild(botaoFiltrar);
-      } else {
-        dadosContainer.textContent = "Nenhum dado encontrado.";
-      }
+        } else {
+            dadosContainer.textContent = "Dados não encontrados.";
+            dadosContainer.style.color = '#f09102';
+        }
     }, (error) => {
-      // ... (Tratamento de erros)
+        removerLoading();
+        dadosContainer.textContent = "Erro ao buscar dados: " + error.message;
+        dadosContainer.style.color = '#f09102';
+        console.error("Erro Firebase:", error);
     });
-  }
-  
-  window.onload = buscarDadosFirebase;
+}
+
+// Evento de clique no botão de busca
+document.getElementById('buscar-dados').addEventListener('click', buscarDadosFirebase);
+
+
+
+// Insere os campos de busca antes do botão
+const botaoBuscar = document.getElementById('buscar-dados');
+botaoBuscar.parentNode.insertBefore(termoBuscaInput, botaoBuscar);
+botaoBuscar.parentNode.insertBefore(campoBuscaInput, botaoBuscar);

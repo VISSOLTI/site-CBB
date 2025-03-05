@@ -79,13 +79,15 @@ function login() {
         "600@vissol.com.br": { password: "!600_sup_j", page: "paginas_supervisores/sup-600/00_pag.html" },
         "700@vissol.com.br": { password: "*700_sup_h", page: "paginas_supervisores/sup-700/00_pag.html" },
         "750@vissol.com.br": { password: "!750_sup_g", page: "paginas_supervisores/sup-750/00_pag.html" },
-        "geral00@vissol.com.br": { password: "*010_ger_x", page: "paginas_supervisores/pagina00.html" },
+        "geral00@vissol.com.br": { password: "*010_ger_x", page: "paginas_supervisores/privado-Consolidado/00_pag.html" },
         "101@vissol.com.br": { password: "q101_vend_t", page: "paginas_supervisores/pagina_101.html" },
         "102@vissol.com.br": { password: "g102_vend_u", page: "paginas_supervisores/pagina_102.html" },
         "103@vissol.com.br": { password: "y103_vend_i", page: "paginas_supervisores/pagina_103.html" },
         "105@vissol.com.br": { password: "p105_vend_o", page: "paginas_supervisores/pagina_105.html" },
         "106@vissol.com.br": { password: "m106_vend_p", page: "paginas_supervisores/pagina_106.html" },
         "107@vissol.com.br": { password: "a107_vend_h", page: "paginas_supervisores/pagina_107.html" },
+
+        "000promotores@vissol.com.br": { password: "*-promo_tores!v", page: "paginas_supervisores/promotores/pag_promotores.html" },
     };
 
     if (users[email] && users[email].password === password) {

@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=p, initial-scale=1.0">
   <link rel="shortcut icon" href="../../favi_icons/icon-cbb.jpg" type="image/x-icon">
-  <link rel="stylesheet" href="/CSS-Supervisor/style.css">
+  <link rel="stylesheet" href="../../CSS-Supervisor/style.css">
+  <link rel="stylesheet" href="../../CSS-Supervisor/MQ-style.css">
   <title>Consulta Faturamento</title>
 </head>
 <body>
@@ -15,8 +16,30 @@
     <h1>Consulta Faturamento</h1>
     <a href="00_pag.html"><button>Voltar</button></a>
   </div>
-    <div id="filtros-container"></div>
-    <div id="dados-container"></div>
+    
+  <select id="campo-busca-select">
+    <option>Opções</option>
+    <option value="Super">Supervisor</option>
+    <option value="Vend">Vendedor</option>
+    <option value="Pedidos">Pedidos</option>
+    <option value="Cód_Cliente">Cód Cliente</option>
+    <option value="Descr_Cliente">Descr Cliente</option>
+    <option value="CNPJ_CPF">CNPJ/CPF</option>
+    <option value="Cidade">Cidade</option>
+    <option value="Grupo_Análise">Grupo Análise</option>
+    <option value="NF">NF</option>
+    <option value="Faturamento">Faturamento</option>
+    <option value="Placa">Placa</option>
+    <option value="Cond_PGTO">Cond PGTO</option>
+    <option value="Dias_Prazo">Dias Prazo</option>
+    <option value="Produtos">Produtos</option>
+    <option value="Origem_Pedido">Origem Pedido</option> 
+  </select>
+
+  <input type="text" id="termo-busca" placeholder="Digite o valor">
+  <button id="buscar-dados">Buscar Dados</button>
+  <hr>
+  <div id="dados-container"></div>
     <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-database-compat.js"></script>
     <script src="../../JS-supervisores/JS-600/04_Faturamento_600.js"></script>

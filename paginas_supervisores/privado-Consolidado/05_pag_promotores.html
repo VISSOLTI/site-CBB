@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=p, initial-scale=1.0">
+  <link rel="shortcut icon" href="../../favi_icons/icon-cbb.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="../../CSS-Supervisor/style.css">
+  <link rel="stylesheet" href="../../CSS-Supervisor/MQ-style.css">
+  <title>Consulta FatDelCBB</title>
+</head>
+<body>
+  <h1 class="logo"><img class="logo-cbb" src="/CSS-Supervisor/logo-cbb.png" alt="">
+    <div class="risca-1"></div>
+  </h1>
+  <div class="container-00">  
+    <h1>Consulta FatDelCBB</h1>
+    <a href="00_pag.html"><button>Voltar</button></a>
+  </div>
+  
+  <select id="campo-busca-select">
+    <option>Opções</option>
+    <option value="Super">Supervisor</option>
+    <option value="Vend">Vendedor</option>
+    <option value="NF">NF</option>
+    <option value="Cód_Red">Cód Red</option>
+    <option value="Descr_Produto">Descr Produto</option>
+    <option value="Qt_UN">Qt UN</option>
+    <option value="Qt_CX">Qt CX</option>
+    <option value="QTD_UND">QTD/UND</option>
+    <option value="Fornecedor">Fornecedor</option>
+    <option value="Cód_Cliente">Cód Cliente</option>
+    <option value="Descr_Cliente">Descr Cliente</option>
+    <option value="Cidade">Cidade</option>
+    <option value="Grupo_Análise">Grupo Análise</option>
+  </select>
+  <input type="text" id="termo-busca" placeholder="Digite o valor">
+  <button id="buscar-dados">Buscar Dados</button>
+  <hr>
+  <div id="dados-container"></div>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-database-compat.js"></script>
+
+    <script src="../../JS-supervisores/JS-promotores/promotores.js"></script>
+    <script src="../../JS-login/auth-guard.js"></script>
+    <script src="../../JS-login/loading.js"></script>
+    <script src="../../JS-login/login_firebase.js"></script>
+    <script src="../../JS-login/login_page_script.js"></script>
+    <script src="../../JS-login/logout.js"></script>
+    <script src="../../JS-login/validation.js"></script>
+</body>
+</html>

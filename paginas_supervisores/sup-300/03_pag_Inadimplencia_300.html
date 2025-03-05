@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=p, initial-scale=1.0">
   <link rel="shortcut icon" href="../../favi_icons/icon-cbb.jpg" type="image/x-icon">
-  <link rel="stylesheet" href="/CSS-Supervisor/style.css">
+  <link rel="stylesheet" href="../../CSS-Supervisor/style.css">
+  <link rel="stylesheet" href="../../CSS-Supervisor/MQ-style.css">
   <title>Consulta Inadimplência</title>
 </head>
 <body>
@@ -15,7 +16,30 @@
     <h1>Consulta Inadimplência</h1>
     <a href="00_pag.html"><button>Voltar</button></a>
   </div>
-  <div id="filtros-container"></div>
+ 
+  <select id="campo-busca-select">
+    <option>Opções</option>
+    <option value="Super">Supervisor</option>
+    <option value="Vend">Vendedor</option>
+    <option value="Cód_Cliente">Cód Cliente</option>
+    <option value="Descr_Cliente">Descr Cliente</option>
+    <option value="CNPJ_CPF">CNPJ</option>
+    <option value="Cidade">Cidade</option>
+    <option value="Grupo_Análise">Grupo Análise</option>
+    <option value="NF_CBB">NF CBB</option>
+    <option value="Data_Emissão">Data Emissão</option>
+    <option value="Valor_Original">Valor Original</option>
+    <option value="Vencimento">Vencimento</option>
+    <option value="Valor_Atualizado">Valor Atualizado</option>
+    <option value="Status_Cobrança">Status Cobrança</option>
+    <option value="Produto">Produto</option>
+    <option value="PF_PJ">PF/PJ</option>
+    <option value="Ficha_Cadastro">Ficha Cadastro</option>
+  </select>
+
+  <input type="text" id="termo-busca" placeholder="Digite o valor">
+  <button id="buscar-dados">Buscar Dados</button>
+  <hr>
   <div id="dados-container"></div>
     <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-database-compat.js"></script>

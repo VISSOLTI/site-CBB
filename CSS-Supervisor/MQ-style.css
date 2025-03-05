@@ -1,0 +1,201 @@
+@media(max-width: 1000px) { 
+
+    .risca-1 {
+        border: 1px solid #4BC9F3;
+        border-radius: 50px;
+        width: 400px;
+        margin: 0 auto;
+    } 
+    
+    
+    .container-principal {
+        display: flex;
+        flex-direction: column;
+        
+        width: 300px;
+        border: 2px solid #f09102;
+        border-radius: 5px;
+    }
+    .container-principal button {
+        font-size: 16px;
+    }
+    
+    
+    .form-group-container-1,
+    .form-group-container-2,
+    .form-group-container-3 {
+        width: 100%;
+        margin: 5px;
+        display: flex;
+        box-shadow: 1px 1px 1px 1px black;
+    }
+    span {
+        margin: 2px;
+    }
+    .form-group-container-2 span #texto45,
+    .form-group-container-2 span #texto13,
+    .form-group-container-2 span #texto8,
+    .form-group-container-2 span #texto12,
+    .form-group-container-2 span #texto11,
+    .form-group-container-2 span #texto9 {
+        margin: 10px auto;
+    }
+    .form-group-container-3 span #texto1,
+    .form-group-container-3 span #texto2,
+    .form-group-container-3 span #texto3,
+    .form-group-container-3 span #texto16,
+    .form-group-container-3 span #texto17,
+    .form-group-container-3 span #texto44,
+    .form-group-container-3 span #texto6,
+    .form-group-container-3 span #texto7,
+    .form-group-container-3 span #texto18,
+    .form-group-container-3 span #texto5,
+    .form-group-container-3 span #texto20,
+    .form-group-container-3 span #texto4,
+    .form-group-container-3 span #texto19,
+    .form-group-container-3 span #texto14,
+    .form-group-container-3 span #texto33 {
+        margin: 10px auto;
+    }
+    #texto43 {
+        padding: 5px;
+        height: 25px;
+        width: 640px;
+        border-radius: 5px;
+    }
+    #texto10 {
+        padding: 5px;
+        height: 20px;
+        width: 150px;
+        border-radius: 5px;
+    }
+    /* 2° LINHA  */
+    #texto45,
+    #texto13,
+    #texto8 {
+        padding: 5px;
+        margin: 0 auto;
+        height: 20px;
+        width: 410px;
+        border-radius: 5px;
+    }
+    #texto12,
+    #texto11,
+    #texto9 {
+        padding: 5px;
+        margin: 0 auto;
+        height: 20px;
+        width: 410px;
+        border-radius: 5px;
+    }
+    /* 3° LINHA  */
+    
+    /* 1° coluna */
+    /* N Sup, Vend 1, Vend 2  */
+    #texto1,
+    #texto2,
+    #texto3 {
+        padding: 5px;
+        margin: 0 auto;
+        height: 20px;
+        width: 50px;
+        border-radius: 5px;
+    }
+    /* 2° coluna */
+    /* Data Cadastro, Última Compra  */
+    #texto16,
+    #texto17 {
+        padding: 5px;
+        margin: 0 auto;
+        height: 20px;
+        width: 170px;
+        border-radius: 5px;
+    }
+    
+    /* Bloqueio, Risco  */
+    #texto44,
+    #texto4 {
+        padding: 5px;
+        margin: 0 auto;
+        height: 20px;
+        width: 50px;
+        border-radius: 5px;
+    }
+    /* 3° coluna */
+    /* Tipo PGT, Prazo, Acordo*/
+    #texto6,
+    #texto18,
+    #texto7 {
+        padding: 5px;
+        margin: 0 auto;
+        height: 20px;
+        width: 110px;
+        border-radius: 5px;
+    }
+    /* 4° coluna */
+    /* Limite, Exposição */
+    #texto5,
+    #texto20 {
+        padding: 5px;
+        margin: 0 auto;
+        height: 20px;
+        width: 180px;
+        border-radius: 5px;
+    }
+    
+    /* 5° coluna */
+    /* Inad atual, Inad Grupo, Protesto */ 
+    #texto14,
+    #texto19,
+    #texto33 {
+        padding: 5px;
+        margin: 0 auto;
+        height: 20px;
+        width: 225px;
+        border-radius: 5px;
+    }
+    
+    }
+    @media (max-width: 730px) {
+    
+    body {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        width: 100%;
+    }
+    h1 .risca-1 {
+        width: 300px;
+      }
+    .container-00 {
+        text-align: center; /* Centraliza o título */
+    }
+    .container-00 h1 {
+        font-size: 1.5em; /* Ajusta o tamanho da fonte do título */
+    }
+
+    #campo-busca-select {
+        font-size: 15px;
+        
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+      }
+    #campo-busca-select, #termo-busca, #buscar-dados {
+        height: 40px;
+        display: block; /* Faz com que os elementos ocupem toda a largura */
+        width: 40%; /* Largura de 90% */
+        margin: 10px auto; /* Margem automática para centralizar */
+        padding: 10px; /* Espaçamento interno */
+        box-sizing: border-box; /* Inclui o padding na largura total */
+    }
+
+
+
+
+
+    
+     
+
+}

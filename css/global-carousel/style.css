@@ -1,5 +1,5 @@
 
-/*CAROSEL */
+/*CAROSEL-FORNECEDORES */
 .fundo03,
 .fundo03-B {
     margin-top: 0px;
@@ -14,96 +14,127 @@
     max-width: 1000px;
     width: 100%;
     position: relative;
-  }
-  .wrapper i,
-  .wrapper-B i {
-    top: 55%;
-    height: 40px;
-    width: 40px;
-    cursor: pointer;
-    font-size: 2.25rem;
-    position: absolute;
-    text-align: center;
-    line-height: 50px;
-    background: #fff;
-    border-radius: 50%;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
-    transform: translateY(-50%);
-    transition: transform 0.1s linear;
-  }
-  .wrapper i:active,
-  .wrapper-B i:active{
-    transform: translateY(-50%) scale(0.85);
-  }
-  .wrapper i:first-child,
-  .wrapper-B i:first-child{
-    left: -50px;
-  }
-  .wrapper i:last-child,
-  .wrapper-B i:last-child{
-    right: -60px;
-  }
-  .wrapper .carousel,
-  .wrapper-B .carousel-B{
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: calc((100% / 6) - 10px);
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 16px;
-    border-radius: 8px;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-  }
-  .carousel::-webkit-scrollbar,
-  .carousel-B::-webkit-scrollbar {
-    display: none;
-  }
-  .carousel.no-transition,
-  .carousel-B.no-transition {
-    scroll-behavior: auto;
-  }
-  .carousel.dragging
-  .carousel-B.dragging {
-    scroll-snap-type: none;
-    scroll-behavior: auto;
-  }
-  .carousel.dragging .card,
-  .carousel-B.dragging .card {
-    cursor: grab;
-    user-select: none;
-  }
-  .carousel :where(.card, .img),
-  .carousel-B :where(.card, .img) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .carousel .card,
-  .carousel-B .card {
-    scroll-snap-align: start;
-    height: 430px;
-    list-style: none;
-    padding-bottom: 15px;
-    flex-direction: column;
-    border-radius: 8px;
-  }
-  .carousel .card .img,
-  .carousel .card .img2,
-  .carousel-B .card .img,
-  .carousel-B .card .img2 {
-    cursor: pointer;
-    background: #fff;
-    height: 105px;
-    width: 105px;
-    border-radius: 50%;
-  }
-  .card .img img,
-  .card .img2 img {
-    cursor: pointer;
-    width: 105px;
-    height: 105px;
-    border-radius: 5px;
-  }
+}
+.wrapper i,
+.wrapper-B i {
+  top: 55%;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  font-size: 2.25rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+.wrapper i:active,
+.wrapper-B i:active{
+  transform: translateY(-50%) scale(0.85);
+}
+.wrapper i:first-child,
+.wrapper-B i:first-child{
+  left: -50px;
+}
+.wrapper i:last-child,
+.wrapper-B i:last-child{
+  right: -60px;
+}
+.wrapper .carousel,
+.wrapper-B .carousel-B{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 6) - 10px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar,
+.carousel-B::-webkit-scrollbar {
+  display: none;
+}
+.carousel.no-transition,
+.carousel-B.no-transition {
+  scroll-behavior: auto;
+}
+.carousel.dragging
+.carousel-B.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.carousel.dragging .card,
+.carousel-B.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+.carousel :where(.card, .img),
+.carousel-B :where(.card, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel .card,
+.carousel-B .card {
+  scroll-snap-align: start;
+  height: 430px;
+  list-style: none;
+  padding-bottom: 15px;
+  flex-direction: column;
+  border-radius: 8px;
+}
+.carousel .card .img,
+.carousel .card .img2,
+.carousel-B .card .img,
+.carousel-B .card .img2 {
+  cursor: pointer;
+  background: #fff;
+  height: 105px;
+  width: 105px;
+  border-radius: 50%;
+}
+.card .img img,
+.card .img2 img {
+  cursor: pointer;
+  width: 105px;
+  height: 105px;
+  border-radius: 5px;
+}
   
-/* FIM - CAROSEL */
+/* CAROuSEL-HOME */
+.carousel-container-home {
+  width: 100%; /* Ajuste a largura conforme necessário */
+  overflow: hidden;
+  position: relative; /* Necessário para posicionar os botões */
+}
+.carousel-home {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.carousel-image-home {
+  width: 100%; /* Cada imagem ocupa 100% da largura do container */
+  flex-shrink: 0; /* Impede que as imagens encolham */
+}
+.carousel-button-home {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1; /* Garante que os botões fiquem sobre a imagem */
+}
+#prevButton,
+#nextButton {
+  height: 100%;
+}
+
+ 

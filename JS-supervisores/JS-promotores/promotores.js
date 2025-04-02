@@ -100,7 +100,9 @@ const firebaseConfig = {
   
               // Define a ordem desejada das colunas
               const ordemColunas = [
-                  "Super", "Vend", "Cód_Red", "Descr_Produto", "Qt_UN", "Qt_CX", "QTD_UND", "Fornecedor", "Cód_Cliente", "Descr_Cliente", "Cidade"];
+                  "CIDADE", "COD_CLIENTE", "DATA_EMISSÃO", "DESCRIÇÃO_CLIENTE", "FORNECEDOR", "GRUPO_ANÁLISE",
+                "NF", "SUP", "VEND"
+            ];
   
               // Itera sobre a ordem desejada
               ordemColunas.forEach(coluna => {

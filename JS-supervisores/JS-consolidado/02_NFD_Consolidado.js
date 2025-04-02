@@ -101,7 +101,7 @@ function buscarDadosFirebase() {
 
             // Define a ordem desejada das colunas
             const ordemColunas = [
-                "Super", "Vend", "Cód_Cliente", "Descr_Cliente", "Cidade", "Grupo_Análise","NFD", "Data_Emissão", "Valor","Mês", "Ano","Status_Aut", "OBS 1"];
+                "Super", "Vend", "Cód_Cliente", "Descr_Cliente", "Cidade", "Grupo_Analise","NFD", "Data_Emissão", "Valor","Mês", "Ano","Status_Aut", "OBS 1"];
 
             // Itera sobre a ordem desejada
             ordemColunas.forEach(coluna => {

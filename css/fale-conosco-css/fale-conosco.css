@@ -85,6 +85,10 @@ header {
 .nav-link:hover::after {
     opacity: 1;
 }
+
+
+
+
 .container-img01-mobile {
     display: none;
 }
@@ -94,7 +98,7 @@ header {
     width: 100vw;
 }
 .container-imagem img {
-    height: 35vh;
+    height: 200px;
     width: 100vw;
 }
 .logo-big {
@@ -229,6 +233,7 @@ header {
 }
   /* Button Styles */
   #btn-ped,
+  #abrir,
   #openModalButton, 
   #openModalButton_Setor { 
     padding: 10px 20px;
@@ -340,18 +345,7 @@ h3 {
     justify-content: center;
     align-items: center;
 }
-.modal-content button {
-    height: 35px;
-    width: 100px;
-    border-radius: 5px;
-    background-color: rgb(213, 42, 42);
-    color: #e4e2e2;
-    font-size: 16px;
-    margin: 10px;
-}
-.email_cad {
-    color: #F09102;
-}
+
 
 /* Consultas Comercial e Cliente */
 .container-consulta {
@@ -544,16 +538,11 @@ hr {
     color: #f09102;
     text-decoration: none;
 }
-
-
-
 .title {
     color: #464646;
     background-color: #ECECEE;
     text-align: center;
 }
-
-
 .container03-mobile {
     display: none;
 }

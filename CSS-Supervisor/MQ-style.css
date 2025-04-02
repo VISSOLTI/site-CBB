@@ -192,6 +192,30 @@
     }
 
 
+    
+/* Estilos para a tabela */
+#dados-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+  }
+    
+  #dados-container table {
+      width: 100%; /* Opcional: define a largura da tabela */
+      background-color: #24252a; /* Opcional: adiciona cor de fundo ao cabeçalho */
+  }
+  
+  #dados-container th,
+  #dados-container td {
+    font-size: 5px;
+      padding: 8px; /* Opcional: adiciona padding às células */
+      text-align: center; /* Opcional: alinha o texto à esquerda */
+      color: #ccc;
+      font-weight: bold;
+  }
+
+
 
 
 

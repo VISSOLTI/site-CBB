@@ -78,49 +78,127 @@
   height: 150px;
   width: 100vw;
 }
-.container01 {
-  height: 350px;
-  width: 100vw;
-  margin-top: 0px;
-  background-image: url('container_fale_conosco.jpeg');
-  background-size: cover;
-  background-repeat: no-repeat;
+.conteudo {
+  height: 250px; /*-----------*/
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
-  justify-content: left;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 20px; /*-----------*/
+  background-color: #2c3e50;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
-.container01 .container-text {
-  color: #ECECEE;
-  text-shadow: 1px 1px 2px #24252a;
-  text-align: left;
-  margin-left: 100px;
-  width: 450px;
+
+.conteudo.mostrar {
+  opacity: 1;
+  transform: translateY(0);
 }
-.container01 .container-text h2 {
-  font-size: 30px;
+
+.conteudo .texto {
+  flex: 1;
+  max-width: 50%;
 }
-.container01  .container-text p {
-  line-height: 25px;
+
+.conteudo .texto h1 {
+  color: #4BC9F3;
+  font-size: 1.5em;
+  margin: 15px;
+  border-top: 2px solid #fff; /* Adiciona a linha acima do título */
+  padding-top: 10px; /* Adiciona um espaço acima do título */
+}
+
+.conteudo .texto p {
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.2;
+  margin: 15px;
+}
+.conteudo .texto li {
+  color: #F09102;
+  list-style: none;
   font-size: 18px;
 }
-.container02 {
-  margin-top: 0px;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  height: 300px;
+
+.conteudo .texto p:last-child,
+.conteudo .texto li:last-child {
+  border-bottom: 2px solid #fff; /* Adiciona a linha abaixo da última linha */
+  padding-bottom: 10px; /* Adiciona um espaço abaixo da última linha */
 }
-.container02 .text {
-  display: flex;
+
+.conteudo .imagem {
+  flex: 1;
+  max-width: 50%;
   text-align: center;
-  justify-content: space-around;
+}
+
+.conteudo .imagem img {
+  max-width: 100%;
+  height: 310px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.list-item-icones p,
+.list-item-cadastro p,
+.list-item p,
+.list-item-consulta p,
+.list-item-consulta_cnpj p {
+    flex-grow: 1;  
+    margin-top: 10px;
+    color: #808080;
+    font-size: 18px;
+    margin: 7px;
+}
+#btn-ped,
+#abrirModal1,
+#openModalButton, 
+#openModalButton_Setor { 
+    padding: 10px 20px;
+    font-size: 15px;
+    border: 2px solid #24252a;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+  }
+
+.container-consulta button {
+  padding: 5px;
+  margin: 5px;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #ECECEE;
+}
+
+.container-links {
+  height: 150px;
+  background-color: #ECECEE;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  height: 300px;
   width: 100vw;
-  font-weight: 600;
 }
-.container02 .risca {
-  width: 200px;
+.container-links h1 {
+  color: #F09102;
+  text-align: center;
+  font-size: 18px;
+  
 }
+.container-links img {
+  height: 20px;
+  margin: 10px;
+}
+.container-links .logo-itau {
+  height: 60px;
+}
+
 .risca-1 {
   display: none;
 }

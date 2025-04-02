@@ -1,0 +1,106 @@
+/* CAROuSEL-HOME */
+.carousel-container-home {
+    width: 100%; /* Ajuste a largura conforme necessário */
+    overflow: hidden;
+    position: relative; /* Necessário para posicionar os botões */
+  }
+  .carousel-home {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  .carousel-image-home {
+    width: 100%; /* Cada imagem ocupa 100% da largura do container */
+    flex-shrink: 0; /* Impede que as imagens encolham */
+  }
+  .carousel-button-home {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1; /* Garante que os botões fiquem sobre a imagem */
+  }
+  #prevButton,
+  #nextButton {
+    height: 100%;
+  }
+
+
+
+/* IMG-TOPO*/
+.carousel-topo {
+    width: 1000px;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-topo::before,
+.carousel-topo::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    height: 2px;
+    transform: translateY(-50%);
+}
+
+.carousel-topo::before {
+    left: -120px;
+}
+
+carousel-topo::after {
+    right: -120px;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 350px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+/* FORNECEDORES */
+.carousel-fornecedores-container,
+.carousel-fornecedores-container-2 {
+    width: 1000px;
+    overflow: hidden;
+    margin: 40px auto;
+  }
+  
+  .carousel-fornecedores,
+  .carousel-fornecedores-2 {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: max-content; /* Garante que o carrossel tenha largura suficiente para todas as imagens */
+  }
+  
+  .carousel-fornecedores img,
+  .carousel-fornecedores-2 img {
+    width: 150px;
+    height: 110px;
+    margin: 10px;
+  }
+
+  
+
+
+   

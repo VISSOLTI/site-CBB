@@ -21,7 +21,6 @@
     font-family: "Montserrat";
     padding: 60px 30px;
     
-
     height: 100%;
     width: 100%;
 }
@@ -150,7 +149,8 @@
     
 #modalForm label,
 #modalForm_cadastro label,
-#modalForm_Setor label {
+#modalForm_Setor label,
+#modalForm_Analise label {   /* ----------- */
     color: #808080;
     font-size: 18px;
 }
@@ -159,7 +159,9 @@
 #modalForm_cadastro  input,
 #modalForm_cadastro textarea,
 #modalForm_Setor input,
-#modalForm_Setor textarea  {
+#modalForm_Setor textarea,
+#modalForm_Analise input,
+#modalForm_Analise textarea   {
     margin: 5px;
 }
 
@@ -196,12 +198,12 @@
 #modalForm_cadastro input[type="email"],
 #modalForm_cadastro input[type="date"],
 #modalForm_cadastro input[type="tel"],
-
 #modalForm_Setor input[type="text"],
 #modalForm_Setor input[type="number"],
 #modalForm_Setor input[type="email"],
 #modalForm_Setor input[type="date"],
-#modalForm_Setor input[type="tel"]{
+#modalForm_Setor input[type="tel"],
+#modalForm_Analise input[type="text"]{  /* ----------- */
     width: 90%;
     padding: 10px;
     margin-bottom: 15px;

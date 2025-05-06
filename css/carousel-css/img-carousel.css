@@ -1,6 +1,6 @@
 /* CAROuSEL-HOME */
 .carousel-container-home {
-    width: 100%; /* Ajuste a largura conforme necessário */
+    width: 50%; /* Ajuste a largura conforme necessário */
     overflow: hidden;
     position: relative; /* Necessário para posicionar os botões */
   }

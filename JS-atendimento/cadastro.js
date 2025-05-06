@@ -24,7 +24,7 @@ const db = getDatabase();
 
 var form_cadastro = document.getElementById("modalForm_cadastro")
 var RazaoSocial = document.getElementById("razao_social");
-var CnpjCpf = document.getElementById("cnpj_cpf"); 
+var CnpjCpf = document.getElementById("cnpj_cpf");
 var NomeFantasia = document.getElementById("nome_fantasia");
 var Canal = document.getElementById("canal");
 var TelCliente = document.getElementById("tel_cliente");
@@ -93,18 +93,50 @@ function Solicitar_cadastro(){
     return;
   }
 
+  if (CnpjCpf.value === '') {
+    alert("Preencha o campo CNPJ/CPF");
+    return;
+  }
 
-  const diaSelecionado_cad = document.querySelector('input[name="dia"]:checked').value;
+  if (NomeFantasia.value === '') {
+    alert("Preencha o campo Nome Fantasia");
+    return;
+  }
 
-  const funcaoSelecionada_cad = document.querySelector('input[name="funcao"]:checked').value;
+  if (TelCliente.value === '') {
+    alert("Preencha o campo Telefone Cliente");
+    return;
+  }
 
-  
   // Validação do e-mail
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(Email.value)) {
-      alert("Por favor, insira um endereço de e-mail válido.");
-      return;
+    alert("Por favor, insira um endereço de e-mail válido.");
+    return;
   }
+
+  const diaSelecionado_cad = document.querySelector('input[name="dia"]:checked');
+  if (!diaSelecionado_cad) {
+    alert("Selecione o Dia da Visita");
+    return;
+  }
+
+  const funcaoSelecionada_cad = document.querySelector('input[name="funcao"]:checked');
+  if (!funcaoSelecionada_cad) {
+    alert("Selecione a Função do Solicitante");
+    return;
+  }
+
+  if (Nome_Solicitante_cad.value === '') {
+    alert("Preencha o campo Nome do Solicitante");
+    return;
+  }
+
+  if (Tel_solicitante_cad.value === '') {
+    alert("Preencha o campo Telefone do Solicitante");
+    return;
+  }
+
 
   // Remover caracteres . / , do campo RazaoSocial
   const razaoSocialSemCaracteres = RazaoSocial.value.replace(/[.,/]/g, '');
@@ -118,15 +150,15 @@ set(ref(db, "Cadastro/" + razaoSocialSemCaracteres),
     Email: Email.value,
     Vendedor: Vendedor.value,
     Supervisor: Supervisor.value,
-    Dia_Visita: diaSelecionado_cad,
-    Nome_Solicitante:  Nome_Solicitante_cad.value,  
+    Dia_Visita: diaSelecionado_cad.value,
+    Nome_Solicitante:  Nome_Solicitante_cad.value,
     Tel_Solicitante:  Tel_solicitante_cad.value,
-    Solicitante: funcaoSelecionada_cad, 
-    Hora_do_Cadastro: horaFormatada_cad, 
+    Solicitante: funcaoSelecionada_cad.value,
+    Hora_do_Cadastro: horaFormatada_cad,
     Observacao: Observacao.value
 } )
 .then(() => {
-  
+
 
   // Aguardar um tempo (opcional) antes de redirecionar
   setTimeout(() => {
@@ -143,4 +175,3 @@ set(ref(db, "Cadastro/" + razaoSocialSemCaracteres),
 
 
 btnEnviar.addEventListener('click', Solicitar_cadastro);
-

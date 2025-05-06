@@ -77,12 +77,12 @@ get(dbref02).then((snapshot) => {
 	  
             
       // Tempo de visualização
-      setTimeout(() => {
-        document.getElementById('ficha_cli').style.display = 'none';
-        document.getElementById('v1_cli').style.display = 'none';
-        document.getElementById('v2_cli').style.display = 'none';
-        document.getElementById('consulta-cod_cli').value = '';
-      }, 15000);
+      //// setTimeout(() => {
+        // document.getElementById('ficha_cli').style.display = 'none';
+        // document.getElementById('v1_cli').style.display = 'none';
+        // document.getElementById('v2_cli').style.display = 'none';
+        // document.getElementById('consulta-cod_cli').value = '';
+      // }, 15000);
     } else {
       alert("Código Cliente não encontrado.");
       document.getElementById('consulta-cod_cli').value = '';

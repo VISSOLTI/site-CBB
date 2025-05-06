@@ -12,7 +12,6 @@ function showForm(formId) {
     }
 }
 
-
 // Lógica para exibir o formulário de avaliação
 function showReviewForm() {
     document.getElementById("reviewForm").style.display = "block";

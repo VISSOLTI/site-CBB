@@ -88,6 +88,8 @@ function login() {
         "107@vissol.com.br": { password: "a107_vend_h", page: "paginas_supervisores/pagina_107.html" },
 
         "000promotores@vissol.com.br": { password: "*-promo_tores!v", page: "paginas_supervisores/promotores/pag_promotores.html" },
+
+        "logistica@skvissol.com.br" : { password: "Jpcbb2204*", page: "paginas_supervisores/NFD/00_pag.html" },
     };
 
     if (users[email] && users[email].password === password) {
@@ -103,7 +105,7 @@ function login() {
     } else {
         hideLoad();
         alert("E-mail ou senha incorretos.");
-        window.location.href = "fale-conosco.html"; // Redireciona para a página padrão
+        window.location.href = "../../atendimento.html"; // Redireciona para a página padrão
     }
 }
 

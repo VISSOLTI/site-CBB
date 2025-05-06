@@ -71,13 +71,13 @@ function SelectData() {
             //resultadoInput.style.margin = 'auto 0px';
             
             // Tempo de visualização
-            setTimeout(() => {
-              document.getElementById('cod').style.display = 'none';
-              document.getElementById('ficha').style.display = 'none';
-              document.getElementById('v1').style.display = 'none';
-              document.getElementById('v2').style.display = 'none';
-            document.getElementById('consulta-cnpj_cpf').value = '';
-            }, 15000); 
+            //setTimeout(() => {
+              //document.getElementById('cod').style.display = 'none';
+              //document.getElementById('ficha').style.display = 'none';
+              //document.getElementById('v1').style.display = 'none';
+              //document.getElementById('v2').style.display = 'none';
+            //document.getElementById('consulta-cnpj_cpf').value = '';
+            //}, 15000); 
           } else {
             alert("CNPJ/CPF não encontrado.");
             document.getElementById('consulta-cnpj_cpf').value = '';

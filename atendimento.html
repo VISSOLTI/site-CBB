@@ -163,15 +163,15 @@
         <label for="nome_fantasia">Nome Fantasia</label>
         <input type="text" id="nome_fantasia">
         <label for="canal">Canal</label>
-        <input type="text" id="canal">
+        <input type="text" placeholder="opcional" id="canal">
         <label for="tel_whats">Tel Cliente</label>
         <input type="tel" id="tel_cliente" placeholder="(00)0000-0000"> 
         <label for="e_mail">Email</label>
         <input type="email" id="e_mail">
         <label for="vendedor">Vendedor</label>
-        <input type="text" id="vendedor">
+        <input type="text" placeholder="opcional" id="vendedor">
         <label for="supervisor">Supervisor</label>
-        <input type="text" id="supervisor">
+        <input type="text" placeholder="opcional" id="supervisor">
         <label for="dia_visita">Dia de Visita</label>
         <hr>
         <label><input id="op_Segunda_cad" type="radio" name="dia" value="Segunda">Segunda</label>
@@ -244,7 +244,6 @@
   </div> 
   <div class="risca-1"></div>
 
-  
 <!--ALTERAÇÃO DE SETOR !!! -->
 <div class="list-item">
   <p>Faça sua alteração de Setor</p>
@@ -260,8 +259,8 @@
         <label for="nome_cliente_setor">Nome Cliente</label>
         <input type="text" id="nome_cliente_setor" name="nome_cliente_setor">
         <hr>
-        <label><input id="op_Subistituicao_setor" type="radio" name="setor" value="Subistituicao">Substituiçao</label>
-        <label><input id="op_Inclusao_setor" type="radio" name="setor" value="Inclusao">Inclusao</label>
+        <label><input id="op_Subistituicao_setor" type="radio" name="setor" value="Substituição">Substituição</label>
+        <label><input id="op_Inclusao_setor" type="radio" name="setor" value="Inclusao">Inclusão</label>
         <hr>
         <label for="vendedor_setor">Vendedor</label>
         <input type="text" id="vendedor_setor">
@@ -289,6 +288,34 @@
         <label for="observacao_prazo">Observação</label>
         <textarea id="observacao_Setor" placeholder="Digite sua observação" maxlength="50"></textarea>
         <input type="button" value="Enviar" id="soli_setor" class="btn">
+      </form>
+    </div>
+  </div>
+</div> 
+<div class="risca-1"></div>
+
+<!--Solicite Análise!!! -->
+<div class="list-item">
+  <p>Solicite análise para prorrogação vencimento</p>
+  <button id="openModalButton_Analise">Análise</button>
+  <div id="modal_Analise" class="modal">
+    <div class="modal-content_cadastro">
+      <span class="close-button_cadastro">&times;</span>
+      <h2>Análise para prorrogação vencimento</h2>
+      <form id="modalForm_Analise">
+        <label for="cod_cliente_Analise">Código do Cliente</label>
+        <input type="text" id="cod_cliente_Analise" name="cod_cliente_Analise">
+        <label for="numero_NF">Número da NF</label>
+        <input type="text" id="numero_NF" name="numero_NF">
+        <label for="prazo_desejado">Prazo desejado</label>
+        <input type="text" id="prazo_desejado">
+        <label for="nome_solicitante_analise">Nome do Solicitante</label>
+        <input type="text" id="nome_solicitante_Analise" name="nome_solicitante">
+        <label for="whats_solicitante">WhatsApp do Solicitante</label>
+        <input type="text" id="whats_solicitante_Analise" placeholder="(00)0000-0000">
+        <label for="observacao_prazo">Observação</label>
+        <textarea id="observacao_analise" placeholder="Digite sua observação" maxlength="50"></textarea>
+        <input type="button" value="Enviar Análise" id="solicitar_analise" class="btn">
       </form>
     </div>
   </div>
@@ -472,9 +499,12 @@
 <script src="script.js"></script>
 <script src="fale_conosco.js"></script>
 
+<script src="JS-modal/modal_analise.js"></script> <!--------------------->
+
 <script type="module" src="JS-atendimento/prazo.js"></script>
 <script type="module" src="JS-atendimento/cadastro.js"></script>
 <script type="module" src="JS-atendimento/setor.js"></script>
+<script type="module" src="JS-atendimento/analise.js"></script>  
 
 <script type="module" src="consulta_01.js"></script>
 <script type="module" src="consulta_02.js"></script>
@@ -491,8 +521,8 @@
 <script src="JS-login/register.js"></script>
 <script src="JS-modal/script.js"></script>
 <script src="JS-carousel/topo.js"></script>
-<script src="JS-carousel/fornecedores.js"></script>
 
+<script src="JS-carousel/fornecedores.js"></script>
 <script src="JS-carousel/carousel-home.js"></script>
 </body>
 </html>

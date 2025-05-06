@@ -50,7 +50,6 @@ Cod_cliente_setor.addEventListener("input", function() {
   formatarCodigo_setor(Cod_cliente_setor);
 });
 
-
 // Adiciona um listener de evento para o input do telefone
 document.getElementById('tel_solicitante_Setor').addEventListener('input', function() {
   var telefone = this.value;
@@ -79,7 +78,7 @@ const dias_opcao = document.querySelector('input[name="dia_setor"]:checked').val
 const funcaoSelecionada = document.querySelector('input[name="funcao"]:checked').value;
 
 
-set(ref(db, "Solicitacao/" + "Cód Cliente: " + Cod_cliente_setor.value +
+set(ref(db, "Solicitação/" + "Cód Cliente: " + Cod_cliente_setor.value +
   " | Nome Cliente: " + Nome_Cliente.value +
   " | Opção: " + duas_opcao +
   " | Nome Vendedor: " + Vendedor_Setor.value +
@@ -92,13 +91,12 @@ set(ref(db, "Solicitacao/" + "Cód Cliente: " + Cod_cliente_setor.value +
       Hora_da_Solicitacao: horaFormatada,
   })
   .then(() => {
-    alert("Solicitacao enviada com sucesso\n Prazo de atendimento 48h");
+    alert("Solicitação enviada com sucesso\n Prazo de atendimento 48h");
     form_setor.reset();
   })
   .catch((error) => {
     alert("falha, error" + error);
   });
 }
-
 
 Insbtn_Setor.addEventListener('click', alterar_Setor);

@@ -86,9 +86,6 @@ header {
     opacity: 1;
 }
 
-
-
-
 .container-img01-mobile {
     display: none;
 }
@@ -236,7 +233,8 @@ header {
   #abrir,
   #openModalButton, 
   #openModalButton_Setor,
-  #openModalButton_Analise { 
+  #openModalButton_Analise,
+  #downloadPdfButton { 
     padding: 10px 20px;
     font-size: 18px;
     border: 2px solid #24252a;
@@ -244,6 +242,11 @@ header {
     cursor: pointer;
     background-color: #007bff;
     color: white;
+  }
+
+  a {
+    color: #FFFFFF;
+    text-decoration: none;
   }
  
   /* Modal Styles  class*/

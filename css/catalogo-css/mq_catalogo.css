@@ -477,24 +477,44 @@
   width: 300px;
 }
 .container02 {
+  margin: 0px auto;
+  height: 1320px;
+  border: none; 
+}
+
+.capas-container {
+    gap: 10px;
+}
+
+/* 
+body.revista-ativa-mobile .container02 {
+  height: 400px;
+} 
+*/
+
+.revista-inicial img {
+    width: 90px;
+    height: auto;
+}
+.pagina img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+#navegacao {
+    display: none;
+    flex-direction: row;
+    gap: 20px;
+    margin-bottom: 20px; /* Adiciona espaço abaixo da navegação */
+}
+#navegacao button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.carousel-fornecedores-2 {
   margin-top: 0px;
-  height: 810px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: none;
-}
-.container-catalogos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
-}
-.container-catalogos img {
-  height: 100px;
-  width: 80px;
-  margin: 5px;
-  border-radius: 0px;
 }
 
 .roda_pe {
@@ -557,4 +577,5 @@
   height: 40px;
   width: 40px;
 }
+
 }

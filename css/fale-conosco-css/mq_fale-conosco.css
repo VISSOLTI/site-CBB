@@ -768,7 +768,8 @@ h2 {
 }
 #btn-ped,
 #openModalButton, 
-#openModalButton_Setor { /*  */
+#openModalButton_Setor,
+#downloadPdfButton { /*  */
   padding: 10px 10px;
   border: none;
   font-size: 13px;

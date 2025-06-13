@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=p, initial-scale=1.0">
+  <link rel="shortcut icon" href="../../favi_icons/icon-cbb.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="../../CSS-Supervisor/css-NF/style-NF.css">
+  <link rel="stylesheet" href="../../CSS-Supervisor/css-NF/Mobile-NF.css">
+  <title>Consulta NF CBB</title>
+</head>
+<body>
+  <h1 class="logo"><img class="logo-cbb" src="/CSS-Supervisor/logo-cbb.png" alt="">
+    <div class="risca-1"></div>
+  </h1>
+  <div class="container-00">  
+    <h1>Consulta NF</h1>
+    <a href="00_pag.html"><button>Voltar</button></a>
+  </div>
+  
+ <input id="campo-busca-select" value="NF" readonly></>
+
+<input type="text" id="termo-busca" placeholder="Digite o num da NF" >
+<button id="buscar-dados">Buscar Dados</button>
+<hr>
+<div id="dados-container"></div>
+
+  
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-database-compat.js"></script>
+
+    <script src="../../JS-supervisores/JS-consolidado/06_NF.js"></script>
+    <script src="../../JS-login/auth-guard.js"></script>
+    <script src="../../JS-login/loading.js"></script>
+    <script src="../../JS-login/login_firebase.js"></script>
+    <script src="../../JS-login/login_page_script.js"></script>
+    <script src="../../JS-login/logout.js"></script>
+    <script src="../../JS-login/validation.js"></script>
+</body>
+</html>

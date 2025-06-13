@@ -1,0 +1,71 @@
+@media(max-width: 1000px) { 
+
+    .risca-1 {
+        border: 1px solid #4BC9F3;
+        border-radius: 50px;
+        width: 400px;
+        margin: 0 auto;
+    } 
+    
+   
+    
+    }
+    @media (max-width: 730px) {
+    
+    body {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        width: 100%;
+    }
+    h1 .risca-1 {
+        width: 300px;
+      }
+    .container-00 {
+        text-align: center; /* Centraliza o título */
+    }
+    .container-00 h1 {
+        font-size: 1.5em; /* Ajusta o tamanho da fonte do título */
+    }
+
+#termo-busca {
+    font-size: 12px;
+}
+   
+#campo-busca-select, #termo-busca, #buscar-dados {
+    height: 40px;
+    display: block; /* Faz com que os elementos ocupem toda a largura */
+    width: 25%; /* Largura de 90% */
+    margin: 10px auto; /* Margem automática para centralizar */
+    padding: 10px; /* Espaçamento interno */
+    box-sizing: border-box; /* Inclui o padding na largura total */
+    text-align: center;
+}
+
+/* Estilos para a tabela */
+#dados-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+  }
+    
+  #dados-container table {
+      width: 100%; /* Opcional: define a largura da tabela */
+      background-color: #24252a; /* Opcional: adiciona cor de fundo ao cabeçalho */
+    
+  }
+  
+  #dados-container th,
+  #dados-container td {
+    font-size: 10.5px;
+    padding: 8px; /* Opcional: adiciona padding às células */
+    text-align: center; /* Opcional: alinha o texto à esquerda */
+    color: #ccc;
+    font-weight: bold;
+  }
+  
+  
+
+}

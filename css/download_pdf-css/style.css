@@ -43,13 +43,14 @@ body {
 .risca-1 {
     border: 1px solid #4BC9F3;
     border-radius: 50px;
-    width: 400px;
+    width: 350px;
     margin: 10px;
 }
 
 h2 {
     color: #F09102;
 }
+
 h3 {
     color: #666;
 }

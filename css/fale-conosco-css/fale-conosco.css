@@ -505,12 +505,11 @@ hr {
   }
 /*---------------------*/
 .risca-1 {
-    border: 1px solid #4BC9F3;
+    border: 1px solid #F09102;
     border-radius: 50px;
-    width: 900px;
+    width: 400px;
     margin: 15px;
 }
-
 .text h3 {
     font-size: 30px;
     color: #4BC9F3;
@@ -553,13 +552,15 @@ hr {
 }
 .container03 {
     background-color: #fff;
-    height: 750px;
-    width: 100vw;
+    height: 750px; /* Considere ajustar a altura conforme o conteúdo */
+    width: 1000px;
     margin-top: 0px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; /* Alinha os itens ao topo do container flex */
     text-align: center;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    margin: 0 auto;
 }
 .container03 h3 {
     margin-top:15px;
@@ -587,7 +588,23 @@ hr {
     flex-direction: row;
     width: 500px;
 }
-
+.container-agendamento {
+    width: 100%; /* Ocupa a largura total para forçar a quebra de linha */
+    max-width: 400px; /* Defina uma largura máxima para o bloco central, se desejar */
+    margin-top: 40px; /* Adiciona espaço acima do novo contato */
+    margin: 0px; /* Adiciona espaço abaixo, se houver mais conteúdo */
+    background-color: #fffaf0; /* Um fundo creme/amarelo muito suave, menos agressivo que um laranja */
+    border: solid 2px #F09102; /* Borda mais espessa e com a cor de destaque */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25); /* Sombra mais forte e difusa para mais profundidade */
+    padding: 0px; /* Mais preenchimento interno para dar mais "respiro" ao conteúdo */
+    border-radius: 12px; /* Cantos um pouco mais arredondados */
+}
+.container-agendamento h3 {
+    color: #F09102;
+}
+.container04 {
+    margin-top: 30px;
+}
 .container-atendimento {
     height: 150px;
     display: flex;

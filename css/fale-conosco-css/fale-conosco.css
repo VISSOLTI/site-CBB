@@ -510,6 +510,12 @@ hr {
     width: 400px;
     margin: 15px;
 }
+.risca-atendimento {
+    border: 1px solid #F09102;
+    border-radius: 50px;
+    width: 900px;
+    margin: 15px;
+}
 .text h3 {
     font-size: 30px;
     color: #4BC9F3;

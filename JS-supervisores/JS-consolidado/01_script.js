@@ -5,8 +5,9 @@
 
  // Your web app's Firebase configuration
  const firebaseConfig = {
-  apiKey: "AIzaSyC-AJ-in_dyuafDjw9HQFNWxHHVg5K9nv8",
+ apiKey: "AIzaSyC-AJ-in_dyuafDjw9HQFNWxHHVg5K9nv8",
   authDomain: "geral-privado.firebaseapp.com",
+  databaseURL: "https://geral-privado-default-rtdb.firebaseio.com",
   projectId: "geral-privado",
   storageBucket: "geral-privado.firebasestorage.app",
   messagingSenderId: "1061861048763",

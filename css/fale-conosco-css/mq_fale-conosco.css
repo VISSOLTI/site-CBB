@@ -663,6 +663,12 @@
   width: 350px;
   margin: 5px;
 }
+.risca-atendimento {
+    border: 1px solid #F09102;
+    border-radius: 50px;
+    width: 350px;
+    margin: 15px;
+}
 
 /*---------------------*/
 .container-consulta {
